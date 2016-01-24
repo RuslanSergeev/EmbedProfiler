@@ -47,25 +47,37 @@
  * @def PROFILER_TOTAL_PROFILERS
  * @brief
  * */	
-#define PROFILER_TOTAL_PROFILERS			1024
+#define PROFILER_TOTAL_PROFILERS                1024
 
 /*!
  * @}
  * */
 
 /*!
+ * @def PROFILER_GLOBAL_PROFILE_INDEX
+ * @brief
+ * */
+#define PROFILER_GLOBAL_PROFILE_INDEX           0
+
+
+/*!
+ * @def PROFILER_LOCAL_PROFILES_BEGIN
+ * @brief
+ * */
+#define PROFILER_LOCAL_PROFILES_BEGIN           ((PROFILER_GLOBAL_PROFILE_INDEX)+1)
+
+/*!
  * @def PROFILER_INSTANCE_NOT_INITIALIZED
  * @brief
  * */	
-#define PROFILER_INSTANCE_NOT_INITIALIZED	-1
+#define PROFILER_INSTANCE_NOT_INITIALIZED       1
 
 extern int32_t PROFILER_instance_last_index;
 extern const char* PROFILER_files_names[PROFILER_TOTAL_PROFILERS];
 extern const char* PROFILER_procedures_names[PROFILER_TOTAL_PROFILERS];
 extern int32_t PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS];
 extern PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS];
-extern PROFILER_timestruct PROFILER_global_begin,PROFILER_global_end;
-extern float PROFILER_total_average;
+
 
 /*!
  * @fn uint8_t PROFILER_instance_is_not_initialized(int32_t PROFILER_instance_index)
@@ -81,20 +93,12 @@ void PROFILER_log();
  * */
 
 /*!
- * @fn float PROFILER_timestamp_begin_end_to_float(PROFILER_timestruct timestamp_begin, PROFILER_timestruct timestamp_end)
- * @brief
- * @param [in] PROFILER_timestruct timestamp_begin
- * @param [in] PROFILER_timestruct timestamp_end
- * @return
- * */
-float PROFILER_timestamp_begin_end_to_float(PROFILER_timestruct timestamp_begin, PROFILER_timestruct timestamp_end);
-
-/*!
  * @fn void PROFILER_get_timestamp(PROFILER_timestruct *PROFILER_timestruct_instance)
  * @brief
  * @param [out] PROFILER_timestruct *PROFILER_timestruct_instance
  * */
-static inline __attribute__((always_inline)) void PROFILER_get_timestamp(PROFILER_timestruct *PROFILER_timestruct_instance){
+static inline __attribute__((always_inline))
+void PROFILER_get_current_time(PROFILER_timestruct *PROFILER_timestruct_instance){
         clock_gettime(CLOCK_PROCESS_CPUTIME_ID,PROFILER_timestruct_instance);
 }
 
@@ -104,7 +108,7 @@ static inline __attribute__((always_inline)) void PROFILER_get_timestamp(PROFILE
  * @param [out] PROFILER_timestruct *PROFILER_timestruct_instance
  * */
 static inline __attribute__((always_inline))
-void PROFILER_calc_average(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index){
+void PROFILER_calc_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index){
     static int32_t PROFILER_seconds_summed = (PROFILER_total_times[PROFILER_instance_index].tv_nsec)/1000000000;\
     PROFILER_total_times[PROFILER_instance_index].tv_sec +=\
         PROFILER_end_time.tv_sec - PROFILER_begin_time.tv_sec + PROFILER_seconds_summed;\
@@ -128,16 +132,28 @@ void PROFILER_calc_average(PROFILER_timestruct PROFILER_begin_time, PROFILER_tim
 		if(PROFILER_instance_is_not_initialized(PROFILER_instance_index)){\
             PROFILER_instance_index = PROFILER_instance_init(__FILE__, __FUNCTION__, __LINE__);\
 		}\
-		PROFILER_get_timestamp(&PROFILER_begin_time)
+        PROFILER_get_current_time(&PROFILER_begin_time)
 		
 /*!
  * @def PROFILER_local_stop()
  * @brief
  * */		
 #define PROFILER_local_stop()\
-			PROFILER_get_timestamp(&PROFILER_end_time);\
-            PROFILER_calc_average(PROFILER_begin_time, PROFILER_end_time, PROFILER_instance_index);\
-	}				
+            PROFILER_get_current_time(&PROFILER_end_time);\
+            PROFILER_calc_time_consumed(PROFILER_begin_time, PROFILER_end_time, PROFILER_instance_index);\
+    }
+
+/*!
+ * @def PROFILER_global_start()
+ * @brief
+ * */
+#define PROFILER_global_start() PROFILER_local_start()
+
+/*!
+ * @def PROFILER_local_stop()
+ * @brief
+ * */
+#define PROFILER_global_stop() PROFILER_local_stop()
 
 /*!
  * @fn int32_t PROFILER_instance_init(const char *file, const char *function, const int32_t line)
@@ -147,7 +163,8 @@ void PROFILER_calc_average(PROFILER_timestruct PROFILER_begin_time, PROFILER_tim
  * @param [in] const int32_t line
  * @return
  * */
-static inline __attribute__((always_inline)) int32_t PROFILER_instance_init(const char *file, const char *function, const int32_t line){
+static inline __attribute__((always_inline))
+int32_t PROFILER_instance_init(const char *file, const char *function, const int32_t line){
         int32_t PROFILER_instance_index = PROFILER_instance_last_index++;
         PROFILER_files_names[PROFILER_instance_index] = file;
         PROFILER_procedures_names[PROFILER_instance_index] = function;
@@ -161,25 +178,10 @@ static inline __attribute__((always_inline)) int32_t PROFILER_instance_init(cons
  * @param [in] int32_t PROFILER_instance_index
  * @return
  * */	
-static inline __attribute__((always_inline)) uint8_t PROFILER_instance_is_not_initialized(int32_t PROFILER_instance_index){
+static inline __attribute__((always_inline))
+uint8_t PROFILER_instance_is_not_initialized(int32_t PROFILER_instance_index){
 	return PROFILER_INSTANCE_NOT_INITIALIZED == PROFILER_instance_index;
 }
 
-/*!
- * @fn void PROFILER_global_start()
- * @brief
- * */
-static inline __attribute__((always_inline)) void PROFILER_global_start(){
-	PROFILER_get_timestamp(&PROFILER_global_begin);
-}
-
-/*!
- * @fn void PROFILER_global_stop()
- * @brief
- * */
-static inline __attribute__((always_inline)) void PROFILER_global_stop(){
-	PROFILER_get_timestamp(&PROFILER_global_end);
-	PROFILER_total_average = PROFILER_timestamp_begin_end_to_float(PROFILER_global_begin,PROFILER_global_end);
-}		
 
 #endif //PROFILING_TOOLS_H
