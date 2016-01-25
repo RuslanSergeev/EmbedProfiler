@@ -2,13 +2,13 @@
 
 /**
   **************************************************************************************************************************
-  * @file    PROFILING_tools.h
+  * @file    PROFILING_tools.c
   * @author  Sergeev Ruslan.
   * 	OOO SPUTNIX,
   * 	MIPT High-Precision Attitude Control Systems Laboratory
   * @version V1.0.0
   * @date    23-January-2016
-  * @brief   Файл PROFILING_tools.h является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени вызовов.
+  * @brief   Файл PROFILING_tools.c является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени вызовов.
         Профилировщик времени вызовов - средство анализа исходного кода программ, представляющее
         программистам и инженерам анализировать время, затраченное на выполнение того или
         иного участка кода в процентном соотношении (относительно общего времени работы профилировщика).
@@ -33,31 +33,31 @@
 int32_t PROFILER_instance_last_index = 0;
 
 /*!
- * @var
+ * @var const char* PROFILER_files_names[PROFILER_TOTAL_PROFILERS]
  * @brief
 */
 const char* PROFILER_files_names[PROFILER_TOTAL_PROFILERS] = {0};
 
 /*!
- * @var
+ * @var const char* PROFILER_procedures_names[PROFILER_TOTAL_PROFILERS]
  * @brief
 */
 const char* PROFILER_procedures_names[PROFILER_TOTAL_PROFILERS] = {0};
 
 /*!
- * @var
+ * @var uint32_t PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS]
  * @brief
 */
 uint32_t PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS] = {0};
 
 /*!
- * @var
+ * @var uint32_t PROFILER_times_called[PROFILER_TOTAL_PROFILERS]
  * @brief
 */
 uint32_t PROFILER_times_called[PROFILER_TOTAL_PROFILERS] = {0};
 
 /*!
- * @var
+ * @var PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS]
  * @brief
 */
 PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS] = {0};

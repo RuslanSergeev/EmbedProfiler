@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="group___configuration__section__for___embed_p_r_o_f_i_l_e_r" kind="group">
+    <compoundname>Configuration_section_for_EmbedPROFILER</compoundname>
+    <title>Configuration_section_for_EmbedPROFILER</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1gae02193769f3b21a09fc0d5035e566a75" prot="public" static="no">
+        <type>struct timespec</type>
+        <definition>PROFILER_timestruct</definition>
+        <argsstring></argsstring>
+        <name>PROFILER_timestruct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="44" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1ga775939d541e95ea75e6e7066a1cc6bcb" prot="public" static="no">
+        <name>PROFILER_TOTAL_PROFILERS</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="50" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

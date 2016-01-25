@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="struct_my__struct" kind="struct" prot="public">
+    <compoundname>My_struct</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_my__struct_1a8ea34b2e963fe95ccac1975beb7fff6a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>volatile float I</definition>
+        <argsstring></argsstring>
+        <name>I</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/perf_test.cpp" line="20" bodyfile="/home/ruslan/EmbedPROFILER/perf_test.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ruslan/EmbedPROFILER/perf_test.cpp" line="19" bodyfile="/home/ruslan/EmbedPROFILER/perf_test.cpp" bodystart="19" bodyend="21"/>
+    <listofallmembers>
+      <member refid="struct_my__struct_1a8ea34b2e963fe95ccac1975beb7fff6a" prot="public" virt="non-virtual"><scope>My_struct</scope><name>I</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

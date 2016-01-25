@@ -1,0 +1,215 @@
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h}{\section{Файл \-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}
+\label{_p_r_o_f_i_l_i_n_g__tools_8h}\index{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}}
+}
+
+
+Файл \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h} является частью библиотеки \-Embed\-P\-R\-O\-F\-I\-L\-E\-R -\/ библиотеки профилировщика времени вызовов. Профилировщик времени вызовов -\/ средство анализа исходного кода программ, представляющее программистам и инженерам анализировать время, затраченное на выполнение того или иного участка кода в процентном соотношении (относительно общего времени работы профилировщика).  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdint.\-h$>$}\*
+{\ttfamily \#include $<$time.\-h$>$}\*
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___configuration__section__for___embed_p_r_o_f_i_l_e_r_ga775939d541e95ea75e6e7066a1cc6bcb}{\#define {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S}~1024}\label{group___configuration__section__for___embed_p_r_o_f_i_l_e_r_ga775939d541e95ea75e6e7066a1cc6bcb}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a39949f1889adb640b9d00c1e794e4038}{\#define {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-\_\-\-I\-N\-D\-E\-X}~0}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a39949f1889adb640b9d00c1e794e4038}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a27d5c6f98201a8f99357c6a5c4b82e66}{\#define {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-L\-O\-C\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-S\-\_\-\-B\-E\-G\-I\-N}~((\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-G\-L\-O\-B\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-\_\-\-I\-N\-D\-E\-X)+1)}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a27d5c6f98201a8f99357c6a5c4b82e66}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_adfa1dd598814dd5a5c73276c47cba92d}{\#define {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-I\-N\-S\-T\-A\-N\-C\-E\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D}~1}\label{_p_r_o_f_i_l_i_n_g__tools_8h_adfa1dd598814dd5a5c73276c47cba92d}
+
+\item 
+\#define {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-start}()
+\item 
+\#define {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop}()
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_ace0e7b35a5a8584b77492c74994409e0}{\#define {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-start}()~\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-start()}\label{_p_r_o_f_i_l_i_n_g__tools_8h_ace0e7b35a5a8584b77492c74994409e0}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a425fb9e92c3523ab2a3581d2cbefb5ce}{\#define {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-stop}()~\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop()}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a425fb9e92c3523ab2a3581d2cbefb5ce}
+
+\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___configuration__section__for___embed_p_r_o_f_i_l_e_r_gae02193769f3b21a09fc0d5035e566a75}{typedef struct timespec {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct}}\label{group___configuration__section__for___embed_p_r_o_f_i_l_e_r_gae02193769f3b21a09fc0d5035e566a75}
+
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a2f57ecff908155818a48144e366f7c57}{void {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-log} ()}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a2f57ecff908155818a48144e366f7c57}
+
+\item 
+void \hyperlink{group__port_ga106b837099d8b52043148fa42592608b}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-get\-\_\-current\-\_\-time} (\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct $\ast$\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct\-\_\-instance)
+\begin{DoxyCompactList}\small\item\em brief description \end{DoxyCompactList}\item 
+void \hyperlink{group__port_ga0072e0d84e203ad6499be54f4b6e14ee}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-time\-\_\-consumed} (\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-begin\-\_\-time, \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-end\-\_\-time, int32\-\_\-t \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index)
+\item 
+void \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a2629430c71701c51e4c8897a61cd0edb}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-times\-\_\-called} (int32\-\_\-t \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index)
+\item 
+int32\-\_\-t \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_af5dcf1143349d3da6f7cadf1b9aaf171}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-init} (const char $\ast$file, const char $\ast$function, const int32\-\_\-t line)
+\item 
+uint8\-\_\-t \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_acf37348ac7f1743ce5ccb80ac04c4944}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-is\-\_\-not\-\_\-initialized} (int32\-\_\-t \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index)
+\end{DoxyCompactItemize}
+\subsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_ab45d681232a34daa38cb1419306a1bf2}{int32\-\_\-t {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-last\-\_\-index}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_ab45d681232a34daa38cb1419306a1bf2}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a0248163891f760fab2d9dacb50cc619f}{const char $\ast$ {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-files\-\_\-names} \mbox{[}\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S\mbox{]}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a0248163891f760fab2d9dacb50cc619f}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a45fffccf71b38481f5e095daf56de466}{const char $\ast$ {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-procedures\-\_\-names} \mbox{[}\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S\mbox{]}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a45fffccf71b38481f5e095daf56de466}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_afebf7705a885e5a8f0e2e0e51f77e04a}{uint32\-\_\-t {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-lines\-\_\-numbers} \mbox{[}\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S\mbox{]}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_afebf7705a885e5a8f0e2e0e51f77e04a}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a9f472cfb52fb98b33b6ca7792d803d25}{uint32\-\_\-t {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-times\-\_\-called} \mbox{[}\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S\mbox{]}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a9f472cfb52fb98b33b6ca7792d803d25}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a7a0dd61f5e00f85f4912351152587d33}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-total\-\_\-times} \mbox{[}\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S\mbox{]}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a7a0dd61f5e00f85f4912351152587d33}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a43db4527124e67e24e5538824fffcf3e}{static \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-end\-\_\-time}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a43db4527124e67e24e5538824fffcf3e}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a4305bc286fe57f872f38dad768444314}{static \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct int32\-\_\-t {\bfseries \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a4305bc286fe57f872f38dad768444314}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_afa24a6ca95b4977cec3238001927aa22}{static const char $\ast$ {\bfseries function}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_afa24a6ca95b4977cec3238001927aa22}
+
+\item 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a031ee87097dac866c201d226e02a629c}{static const char const int32\-\_\-t {\bfseries line}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a031ee87097dac866c201d226e02a629c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Файл \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h} является частью библиотеки \-Embed\-P\-R\-O\-F\-I\-L\-E\-R -\/ библиотеки профилировщика времени вызовов. Профилировщик времени вызовов -\/ средство анализа исходного кода программ, представляющее программистам и инженерам анализировать время, затраченное на выполнение того или иного участка кода в процентном соотношении (относительно общего времени работы профилировщика). \begin{DoxyAuthor}{Автор}
+\-Sergeev \-Ruslan. \-O\-O\-O \-S\-P\-U\-T\-N\-I\-X, \-M\-I\-P\-T \-High-\/\-Precision \-Attitude \-Control \-Systems \-Laboratory 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+\-V1.\-0.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Дата}
+23-\/\-January-\/2016 
+\end{DoxyDate}
+\begin{DoxyAttention}{Внимание}
+\-T\-H\-E \-P\-R\-E\-S\-E\-N\-T \-F\-I\-R\-M\-W\-A\-R\-E \-W\-H\-I\-C\-H \-I\-S \-F\-O\-R \-G\-U\-I\-D\-A\-N\-C\-E \-O\-N\-L\-Y \-A\-I\-M\-S \-A\-T \-P\-R\-O\-V\-I\-D\-I\-N\-G \-C\-U\-S\-T\-O\-M\-E\-R\-S \-W\-I\-T\-H \-C\-O\-D\-I\-N\-G \-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N \-R\-E\-G\-A\-R\-D\-I\-N\-G \-T\-H\-E\-I\-R \-P\-R\-O\-D\-U\-C\-T\-S \-I\-N \-O\-R\-D\-E\-R \-F\-O\-R \-T\-H\-E\-M \-T\-O \-S\-A\-V\-E \-T\-I\-M\-E. \-A\-S \-A \-R\-E\-S\-U\-L\-T, \-O\-O\-O \-S\-P\-U\-T\-N\-I\-X, \-M\-I\-P\-T \-High-\/\-Precision \-Attitude \-Control \-Systems \-Laboratory \-S\-H\-A\-L\-L \-N\-O\-T \-B\-E \-H\-E\-L\-D \-L\-I\-A\-B\-L\-E \-F\-O\-R \-A\-N\-Y \-D\-I\-R\-E\-C\-T, \-I\-N\-D\-I\-R\-E\-C\-T \-O\-R \-C\-O\-N\-S\-E\-Q\-U\-E\-N\-T\-I\-A\-L \-D\-A\-M\-A\-G\-E\-S \-W\-I\-T\-H \-R\-E\-S\-P\-E\-C\-T \-T\-O \-A\-N\-Y \-C\-L\-A\-I\-M\-S \-A\-R\-I\-S\-I\-N\-G \-F\-R\-O\-M \-T\-H\-E \-C\-O\-N\-T\-E\-N\-T \-O\-F \-S\-U\-C\-H \-F\-I\-R\-M\-W\-A\-R\-E \-A\-N\-D/\-O\-R \-T\-H\-E \-U\-S\-E \-M\-A\-D\-E \-B\-Y \-C\-U\-S\-T\-O\-M\-E\-R\-S \-O\-F \-T\-H\-E \-C\-O\-D\-I\-N\-G \-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N \-C\-O\-N\-T\-A\-I\-N\-E\-D \-H\-E\-R\-E\-I\-N \-I\-N \-C\-O\-N\-N\-E\-C\-T\-I\-O\-N \-W\-I\-T\-H \-T\-H\-E\-I\-R \-P\-R\-O\-D\-U\-C\-T\-S.
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright \-C\-O\-P\-Y\-R\-I\-G\-H\-T 2016 \-R\-U\-S\-L\-A\-N \-S\-E\-R\-G\-E\-E\-V\end{center} }
+
+См. определение в файле \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_source}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}
+
+
+
+\subsection{Макросы}
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a632f3afa2c72dd938e2a5d7e9c1e202e}{\index{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-start@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-start}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-start@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-start}!PROFILING_tools.h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-start(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a632f3afa2c72dd938e2a5d7e9c1e202e}
+{\bfseries Макроопределение\-:}
+\begin{DoxyCode}
+{\
+                static int32_t PROFILER_instance_index = 
+      PROFILER_INSTANCE_NOT_INITIALIZED;\
+                PROFILER_timestruct PROFILER_begin_time, PROFILER_end_time;\
+                if(PROFILER_instance_is_not_initialized(PROFILER_instance_index
+      )){\
+            PROFILER_instance_index = PROFILER_instance_init(__FILE__, 
+      __FUNCTION__, __LINE__);\
+                }\
+        PROFILER_refresh_times_called(PROFILER_instance_index);\
+        PROFILER_get_current_time(&PROFILER_begin_time);
+\end{DoxyCode}
+
+
+См. определение в файле \-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h строка 150
+
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_ad8354a6502e89adea8535f4029a15b5f}{\index{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop}!PROFILING_tools.h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_ad8354a6502e89adea8535f4029a15b5f}
+{\bfseries Макроопределение\-:}
+\begin{DoxyCode}
+PROFILER_get_current_time(&PROFILER_end_time);\
+            PROFILER_refresh_time_consumed(PROFILER_begin_time, 
+      PROFILER_end_time, PROFILER_instance_index);\
+    }
+\end{DoxyCode}
+
+
+\subsection{Функции}
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_af5dcf1143349d3da6f7cadf1b9aaf171}{\index{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-init@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-init}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-init@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-init}!PROFILING_tools.h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t {\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file, }
+\item[{const char $\ast$}]{function, }
+\item[{const int32\-\_\-t}]{line}
+\end{DoxyParamCaption}
+)}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_af5dcf1143349d3da6f7cadf1b9aaf171}
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em const} & char $\ast$file \\
+\hline
+\mbox{\tt in}  & {\em const} & char $\ast$function \\
+\hline
+\mbox{\tt in}  & {\em const} & int32\-\_\-t line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+
+\end{DoxyReturn}
+
+
+См. определение в файле \-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h строка 189
+
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_acf37348ac7f1743ce5ccb80ac04c4944}{\index{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-is\-\_\-not\-\_\-initialized@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-is\-\_\-not\-\_\-initialized}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-is\-\_\-not\-\_\-initialized@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-is\-\_\-not\-\_\-initialized}!PROFILING_tools.h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-is\-\_\-not\-\_\-initialized}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-is\-\_\-not\-\_\-initialized} (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_acf37348ac7f1743ce5ccb80ac04c4944}
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em int32\-\_\-t} & \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+
+\end{DoxyReturn}
+
+
+См. определение в файле \-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h строка 203
+
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_a2629430c71701c51e4c8897a61cd0edb}{\index{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-times\-\_\-called@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-times\-\_\-called}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-times\-\_\-called@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-times\-\_\-called}!PROFILING_tools.h@{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-times\-\_\-called}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-times\-\_\-called} (
+\begin{DoxyParamCaption}
+\item[{int32\-\_\-t}]{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{_p_r_o_f_i_l_i_n_g__tools_8h_a2629430c71701c51e4c8897a61cd0edb}
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em int32\-\_\-t} & \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h строка 142
+

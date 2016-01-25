@@ -1,0 +1,607 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_p_r_o_f_i_l_i_n_g__tools_8h" kind="file">
+    <compoundname>PROFILING_tools.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">time.h</includes>
+    <includedby refid="perf__test_8cpp" local="yes">perf_test.cpp</includedby>
+    <includedby refid="_p_r_o_f_i_l_i_n_g__tools_8c" local="yes">PROFILING_tools.c</includedby>
+    <incdepgraph>
+      <node id="14">
+        <label>stdint.h</label>
+      </node>
+      <node id="15">
+        <label>time.h</label>
+      </node>
+      <node id="12">
+        <label>PROFILING_tools.h</label>
+        <link refid="PROFILING_tools.h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17">
+        <label>perf_test.cpp</label>
+        <link refid="perf__test_8cpp_source"/>
+      </node>
+      <node id="18">
+        <label>PROFILING_tools.c</label>
+        <link refid="_p_r_o_f_i_l_i_n_g__tools_8c"/>
+      </node>
+      <node id="16">
+        <label>PROFILING_tools.h</label>
+        <link refid="PROFILING_tools.h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1ga775939d541e95ea75e6e7066a1cc6bcb" prot="public" static="no">
+        <name>PROFILER_TOTAL_PROFILERS</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="50" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a39949f1889adb640b9d00c1e794e4038" prot="public" static="no">
+        <name>PROFILER_GLOBAL_PROFILE_INDEX</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="60" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a27d5c6f98201a8f99357c6a5c4b82e66" prot="public" static="no">
+        <name>PROFILER_LOCAL_PROFILES_BEGIN</name>
+        <initializer>((PROFILER_GLOBAL_PROFILE_INDEX)+1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="67" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_p_r_o_f_i_l_i_n_g__tools_8h_1adfa1dd598814dd5a5c73276c47cba92d" prot="public" static="no">
+        <name>PROFILER_INSTANCE_NOT_INITIALIZED</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="73" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" prot="public" static="no">
+        <name>PROFILER_local_start</name>
+        <param></param>
+        <initializer>{\
+		static int32_t PROFILER_instance_index = PROFILER_INSTANCE_NOT_INITIALIZED;\
+		PROFILER_timestruct PROFILER_begin_time, PROFILER_end_time;\
+		if(<ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1acf37348ac7f1743ce5ccb80ac04c4944" kindref="member">PROFILER_instance_is_not_initialized</ref>(PROFILER_instance_index)){\
+            PROFILER_instance_index = <ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1af5dcf1143349d3da6f7cadf1b9aaf171" kindref="member">PROFILER_instance_init</ref>(__FILE__, __FUNCTION__, __LINE__);\
+		}\
+        <ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a2629430c71701c51e4c8897a61cd0edb" kindref="member">PROFILER_refresh_times_called</ref>(PROFILER_instance_index);\
+        <ref refid="group__port_1ga106b837099d8b52043148fa42592608b" kindref="member">PROFILER_get_current_time</ref>(&amp;PROFILER_begin_time);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="158" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" prot="public" static="no">
+        <name>PROFILER_local_stop</name>
+        <param></param>
+        <initializer><ref refid="group__port_1ga106b837099d8b52043148fa42592608b" kindref="member">PROFILER_get_current_time</ref>(&amp;PROFILER_end_time);\
+            <ref refid="group__port_1ga0072e0d84e203ad6499be54f4b6e14ee" kindref="member">PROFILER_refresh_time_consumed</ref>(PROFILER_begin_time, PROFILER_end_time, PROFILER_instance_index);\
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="167"/>
+      </memberdef>
+      <memberdef kind="define" id="_p_r_o_f_i_l_i_n_g__tools_8h_1ace0e7b35a5a8584b77492c74994409e0" prot="public" static="no">
+        <name>PROFILER_global_start</name>
+        <param></param>
+        <initializer>PROFILER_local_start()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="173" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a425fb9e92c3523ab2a3581d2cbefb5ce" prot="public" static="no">
+        <name>PROFILER_global_stop</name>
+        <param></param>
+        <initializer>PROFILER_local_stop()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="179" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1gae02193769f3b21a09fc0d5035e566a75" prot="public" static="no">
+        <type>struct timespec</type>
+        <definition>PROFILER_timestruct</definition>
+        <argsstring></argsstring>
+        <name>PROFILER_timestruct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="44" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1ab45d681232a34daa38cb1419306a1bf2" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t PROFILER_instance_last_index</definition>
+        <argsstring></argsstring>
+        <name>PROFILER_instance_last_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="75" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a0248163891f760fab2d9dacb50cc619f" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* PROFILER_files_names[PROFILER_TOTAL_PROFILERS]</definition>
+        <argsstring>[PROFILER_TOTAL_PROFILERS]</argsstring>
+        <name>PROFILER_files_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="76" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a45fffccf71b38481f5e095daf56de466" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* PROFILER_procedures_names[PROFILER_TOTAL_PROFILERS]</definition>
+        <argsstring>[PROFILER_TOTAL_PROFILERS]</argsstring>
+        <name>PROFILER_procedures_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="77" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1afebf7705a885e5a8f0e2e0e51f77e04a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS]</definition>
+        <argsstring>[PROFILER_TOTAL_PROFILERS]</argsstring>
+        <name>PROFILER_lines_numbers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="78" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a9f472cfb52fb98b33b6ca7792d803d25" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t PROFILER_times_called[PROFILER_TOTAL_PROFILERS]</definition>
+        <argsstring>[PROFILER_TOTAL_PROFILERS]</argsstring>
+        <name>PROFILER_times_called</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="79" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a7a0dd61f5e00f85f4912351152587d33" prot="public" static="no" mutable="no">
+        <type>PROFILER_timestruct</type>
+        <definition>PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS]</definition>
+        <argsstring>[PROFILER_TOTAL_PROFILERS]</argsstring>
+        <name>PROFILER_total_times</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="80" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a43db4527124e67e24e5538824fffcf3e" prot="public" static="no" mutable="no">
+        <type>PROFILER_timestruct</type>
+        <definition>PROFILER_timestruct PROFILER_end_time</definition>
+        <argsstring></argsstring>
+        <name>PROFILER_end_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="83" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a4305bc286fe57f872f38dad768444314" prot="public" static="no" mutable="no">
+        <type>PROFILER_timestruct int32_t</type>
+        <definition>PROFILER_timestruct int32_t PROFILER_instance_index</definition>
+        <argsstring></argsstring>
+        <name>PROFILER_instance_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="83" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1afa24a6ca95b4977cec3238001927aa22" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* function</definition>
+        <argsstring></argsstring>
+        <name>function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="92" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a031ee87097dac866c201d226e02a629c" prot="public" static="no" mutable="no">
+        <type>const char const int32_t</type>
+        <definition>const char const int32_t line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="92" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a4114e96da13fc00d62fc2f0ab301e996" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static __attribute__</definition>
+        <argsstring>((always_inline)) void PROFILER_refresh_time_consumed(PROFILER_timestruct PROFILER_begin_time</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(always_inline)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a2f57ecff908155818a48144e366f7c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PROFILER_log</definition>
+        <argsstring>()</argsstring>
+        <name>PROFILER_log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="101" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="90" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__port_1ga106b837099d8b52043148fa42592608b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>PROFILER_get_current_time</definition>
+        <argsstring>(PROFILER_timestruct *PROFILER_timestruct_instance)</argsstring>
+        <name>PROFILER_get_current_time</name>
+        <param>
+          <type>PROFILER_timestruct *</type>
+          <declname>PROFILER_timestruct_instance</declname>
+        </param>
+        <briefdescription>
+<para>brief description </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">PROFILER_timestruct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*PROFILER_timestruct_instance </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="113" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="group__port_1ga0072e0d84e203ad6499be54f4b6e14ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PROFILER_refresh_time_consumed</definition>
+        <argsstring>(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index)</argsstring>
+        <name>PROFILER_refresh_time_consumed</name>
+        <param>
+          <type>PROFILER_timestruct</type>
+          <declname>PROFILER_begin_time</declname>
+        </param>
+        <param>
+          <type>PROFILER_timestruct</type>
+          <declname>PROFILER_end_time</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>PROFILER_instance_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">@ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PROFILER_timestruct PROFILER_begin_time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">@ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PROFILER_timestruct PROFILER_end_time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">int32_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PROFILER_instance_index </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="124" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="124" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8h_1a2629430c71701c51e4c8897a61cd0edb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PROFILER_refresh_times_called</definition>
+        <argsstring>(int32_t PROFILER_instance_index)</argsstring>
+        <name>PROFILER_refresh_times_called</name>
+        <param>
+          <type>int32_t</type>
+          <declname>PROFILER_instance_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">int32_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PROFILER_instance_index </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="142" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8h_1af5dcf1143349d3da6f7cadf1b9aaf171" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t PROFILER_instance_init</definition>
+        <argsstring>(const char *file, const char *function, const int32_t line)</argsstring>
+        <name>PROFILER_instance_init</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>const int32_t</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char *file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char *function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int32_t line </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="189" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="189" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8h_1acf37348ac7f1743ce5ccb80ac04c4944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t PROFILER_instance_is_not_initialized</definition>
+        <argsstring>(int32_t PROFILER_instance_index)</argsstring>
+        <name>PROFILER_instance_is_not_initialized</name>
+        <param>
+          <type>int32_t</type>
+          <declname>PROFILER_instance_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">int32_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PROFILER_instance_index </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="203" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="203" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Файл <ref refid="_p_r_o_f_i_l_i_n_g__tools_8h" kindref="compound">PROFILING_tools.h</ref> является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени вызовов. Профилировщик времени вызовов - средство анализа исходного кода программ, представляющее программистам и инженерам анализировать время, затраченное на выполнение того или иного участка кода в процентном соотношении (относительно общего времени работы профилировщика). </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Sergeev Ruslan. OOO SPUTNIX, MIPT High-Precision Attitude Control Systems Laboratory </para></simplesect>
+<simplesect kind="version"><para>V1.0.0 </para></simplesect>
+<simplesect kind="date"><para>23-January-2016 </para></simplesect>
+<simplesect kind="attention"><para>THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, OOO SPUTNIX, MIPT High-Precision Attitude Control Systems Laboratory SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.</para></simplesect>
+<heading level="2"><center><copy/> COPYRIGHT 2016 RUSLAN SERGEEV</center></heading>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#ifndef<sp/>PROFILING_TOOLS_H</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PROFILING_TOOLS_H</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>PROFILER_timestruct;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor">#define<sp/>PROFILER_TOTAL_PROFILERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor">#define<sp/>PROFILER_GLOBAL_PROFILE_INDEX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor">#define<sp/>PROFILER_LOCAL_PROFILES_BEGIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((PROFILER_GLOBAL_PROFILE_INDEX)+1)</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor">#define<sp/>PROFILER_INSTANCE_NOT_INITIALIZED<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>int32_t<sp/>PROFILER_instance_last_index;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>PROFILER_files_names[PROFILER_TOTAL_PROFILERS];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>PROFILER_procedures_names[PROFILER_TOTAL_PROFILERS];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint32_t<sp/>PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint32_t<sp/>PROFILER_times_called[PROFILER_TOTAL_PROFILERS];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>PROFILER_timestruct<sp/>PROFILER_total_times[PROFILER_TOTAL_PROFILERS];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__attribute__((always_inline))</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">void<sp/><ref refid="group__port_1ga0072e0d84e203ad6499be54f4b6e14ee" kindref="member">PROFILER_refresh_time_consumed</ref>(PROFILER_timestruct<sp/>PROFILER_begin_time,<sp/>PROFILER_timestruct<sp/>PROFILER_end_time,<sp/>int32_t<sp/>PROFILER_instance_index);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">static<sp/>inline<sp/>__attribute__((always_inline))</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__port_1ga106b837099d8b52043148fa42592608b" kindref="member" tooltip="brief description">PROFILER_get_current_time</ref>(PROFILER_timestruct<sp/>*PROFILER_timestruct_instance);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">static<sp/>inline<sp/>__attribute__((always_inline))</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a2629430c71701c51e4c8897a61cd0edb" kindref="member">PROFILER_refresh_times_called</ref>(int32_t<sp/>PROFILER_instance_index);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">static<sp/>inline<sp/>__attribute__((always_inline))</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">int32_t<sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1af5dcf1143349d3da6f7cadf1b9aaf171" kindref="member">PROFILER_instance_init</ref>(const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*function,<sp/>const<sp/>int32_t<sp/>line);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">static<sp/>inline<sp/>__attribute__((always_inline))</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">uint8_t<sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1acf37348ac7f1743ce5ccb80ac04c4944" kindref="member">PROFILER_instance_is_not_initialized</ref>(int32_t<sp/>PROFILER_instance_index);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PROFILER_log();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="group__port_1ga106b837099d8b52043148fa42592608b" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__port_1ga106b837099d8b52043148fa42592608b" kindref="member" tooltip="brief description">PROFILER_get_current_time</ref>(PROFILER_timestruct<sp/>*PROFILER_timestruct_instance){</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clock_gettime(CLOCK_PROCESS_CPUTIME_ID,PROFILER_timestruct_instance);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="group__port_1ga0072e0d84e203ad6499be54f4b6e14ee" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__port_1ga0072e0d84e203ad6499be54f4b6e14ee" kindref="member">PROFILER_refresh_time_consumed</ref>(PROFILER_timestruct<sp/>PROFILER_begin_time,<sp/>PROFILER_timestruct<sp/>PROFILER_end_time,<sp/>int32_t<sp/>PROFILER_instance_index){</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int32_t<sp/>PROFILER_seconds_summed<sp/>=<sp/>(PROFILER_total_times[PROFILER_instance_index].tv_nsec)/1000000000;\</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_total_times[PROFILER_instance_index].tv_sec<sp/>+=\</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_end_time.tv_sec<sp/>-<sp/>PROFILER_begin_time.tv_sec<sp/>+<sp/>PROFILER_seconds_summed;\</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_total_times[PROFILER_instance_index].tv_nsec<sp/>=\</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_total_times[PROFILER_instance_index].tv_nsec-1000000000*PROFILER_seconds_summed<sp/>+\</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(PROFILER_end_time.tv_nsec<sp/>-<sp/>PROFILER_begin_time.tv_nsec);\</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a2629430c71701c51e4c8897a61cd0edb" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a2629430c71701c51e4c8897a61cd0edb" kindref="member">PROFILER_refresh_times_called</ref>(int32_t<sp/>PROFILER_instance_index){</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_times_called[PROFILER_instance_index]<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor">#define<sp/>PROFILER_local_start()\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{\</highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>int32_t<sp/>PROFILER_instance_index<sp/>=<sp/>PROFILER_INSTANCE_NOT_INITIALIZED;\</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_timestruct<sp/>PROFILER_begin_time,<sp/>PROFILER_end_time;\</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(PROFILER_instance_is_not_initialized(PROFILER_instance_index)){\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_instance_index<sp/>=<sp/>PROFILER_instance_init(__FILE__,<sp/>__FUNCTION__,<sp/>__LINE__);\</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_refresh_times_called(PROFILER_instance_index);\</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_get_current_time(&amp;PROFILER_begin_time);</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor">#define<sp/>PROFILER_local_stop()\</highlight></codeline>
+<codeline lineno="165"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_get_current_time(&amp;PROFILER_end_time);\</highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_refresh_time_consumed(PROFILER_begin_time,<sp/>PROFILER_end_time,<sp/>PROFILER_instance_index);\</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="173"><highlight class="preprocessor">#define<sp/>PROFILER_global_start()<sp/>PROFILER_local_start()</highlight></codeline>
+<codeline lineno="174"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor">#define<sp/>PROFILER_global_stop()<sp/>PROFILER_local_stop()</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="189" refid="_p_r_o_f_i_l_i_n_g__tools_8h_1af5dcf1143349d3da6f7cadf1b9aaf171" refkind="member"><highlight class="normal">int32_t<sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1af5dcf1143349d3da6f7cadf1b9aaf171" kindref="member">PROFILER_instance_init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>line){</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>PROFILER_instance_index<sp/>=<sp/>PROFILER_instance_last_index++;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_files_names[PROFILER_instance_index]<sp/>=<sp/>file;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_procedures_names[PROFILER_instance_index]<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_lines_numbers[PROFILER_instance_index]<sp/>=<sp/>line;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PROFILER_instance_index;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="_p_r_o_f_i_l_i_n_g__tools_8h_1acf37348ac7f1743ce5ccb80ac04c4944" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1acf37348ac7f1743ce5ccb80ac04c4944" kindref="member">PROFILER_instance_is_not_initialized</ref>(int32_t<sp/>PROFILER_instance_index){</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PROFILER_INSTANCE_NOT_INITIALIZED<sp/>==<sp/>PROFILER_instance_index;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//PROFILING_TOOLS_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h"/>
+  </compounddef>
+</doxygen>

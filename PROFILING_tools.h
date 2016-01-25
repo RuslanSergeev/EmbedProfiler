@@ -79,35 +79,48 @@ extern uint32_t PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS];
 extern uint32_t PROFILER_times_called[PROFILER_TOTAL_PROFILERS];
 extern PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS];
 
+static inline __attribute__((always_inline))
+void PROFILER_refresh_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index);
+
+static inline __attribute__((always_inline))
+void PROFILER_get_current_time(PROFILER_timestruct *PROFILER_timestruct_instance);
+
+static inline __attribute__((always_inline))
+void PROFILER_refresh_times_called(int32_t PROFILER_instance_index);
+
+static inline __attribute__((always_inline))
+int32_t PROFILER_instance_init(const char *file, const char *function, const int32_t line);
+
+static inline __attribute__((always_inline))
+uint8_t PROFILER_instance_is_not_initialized(int32_t PROFILER_instance_index);
+
 /*!
- * @fn uint8_t PROFILER_instance_is_not_initialized(int32_t PROFILER_instance_index)
+ * @fn void PROFILER_log()
  * @brief
- * @param [in] int32_t PROFILER_instance_index
- * @return
  * */
 void PROFILER_log();
 
 /*!
- * @addtogroup Configuration_section_for_EmbedPROFILER
+ * @addtogroup port functions for EmbedPROFILER
  * @{
  * */
 
 /*!
- * @fn void PROFILER_get_timestamp(PROFILER_timestruct *PROFILER_timestruct_instance)
- * @brief
+ * @fn PROFILER_get_current_time(PROFILER_timestruct *PROFILER_timestruct_instance)
+ * @brief brief description
  * @param [out] PROFILER_timestruct *PROFILER_timestruct_instance
  * */
-static inline __attribute__((always_inline))
 void PROFILER_get_current_time(PROFILER_timestruct *PROFILER_timestruct_instance){
         clock_gettime(CLOCK_PROCESS_CPUTIME_ID,PROFILER_timestruct_instance);
 }
 
 /*!
- * @fn void PROFILER_get_timestamp(PROFILER_timestruct *PROFILER_timestruct_instance)
+ * @fn void PROFILER_refresh_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index)
  * @brief
- * @param [out] PROFILER_timestruct *PROFILER_timestruct_instance
+ * @param [in] @ref PROFILER_timestruct PROFILER_begin_time
+ * @param [in] @ref PROFILER_timestruct PROFILER_end_time
+ * @param [in] int32_t PROFILER_instance_index
  * */
-static inline __attribute__((always_inline))
 void PROFILER_refresh_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index){
     static int32_t PROFILER_seconds_summed = (PROFILER_total_times[PROFILER_instance_index].tv_nsec)/1000000000;\
     PROFILER_total_times[PROFILER_instance_index].tv_sec +=\
@@ -126,7 +139,6 @@ void PROFILER_refresh_time_consumed(PROFILER_timestruct PROFILER_begin_time, PRO
  * @brief
  * @param [in] int32_t PROFILER_instance_index
  * */
-static inline __attribute__((always_inline))
 void PROFILER_refresh_times_called(int32_t PROFILER_instance_index){
     PROFILER_times_called[PROFILER_instance_index] += 1;
 }
@@ -174,7 +186,6 @@ void PROFILER_refresh_times_called(int32_t PROFILER_instance_index){
  * @param [in] const int32_t line
  * @return
  * */
-static inline __attribute__((always_inline))
 int32_t PROFILER_instance_init(const char *file, const char *function, const int32_t line){
         int32_t PROFILER_instance_index = PROFILER_instance_last_index++;
         PROFILER_files_names[PROFILER_instance_index] = file;
@@ -188,8 +199,7 @@ int32_t PROFILER_instance_init(const char *file, const char *function, const int
  * @brief
  * @param [in] int32_t PROFILER_instance_index
  * @return
- * */	
-static inline __attribute__((always_inline))
+ * */
 uint8_t PROFILER_instance_is_not_initialized(int32_t PROFILER_instance_index){
 	return PROFILER_INSTANCE_NOT_INITIALIZED == PROFILER_instance_index;
 }
