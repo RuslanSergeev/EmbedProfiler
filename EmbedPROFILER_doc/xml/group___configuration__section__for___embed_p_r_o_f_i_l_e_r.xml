@@ -18,6 +18,80 @@
         <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="44" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1ga106b837099d8b52043148fa42592608b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>PROFILER_get_current_time</definition>
+        <argsstring>(PROFILER_timestruct *PROFILER_timestruct_instance)</argsstring>
+        <name>PROFILER_get_current_time</name>
+        <param>
+          <type>PROFILER_timestruct *</type>
+          <declname>PROFILER_timestruct_instance</declname>
+        </param>
+        <briefdescription>
+<para>brief description </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">PROFILER_timestruct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*PROFILER_timestruct_instance </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="113" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1ga0072e0d84e203ad6499be54f4b6e14ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PROFILER_refresh_time_consumed</definition>
+        <argsstring>(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index)</argsstring>
+        <name>PROFILER_refresh_time_consumed</name>
+        <param>
+          <type>PROFILER_timestruct</type>
+          <declname>PROFILER_begin_time</declname>
+        </param>
+        <param>
+          <type>PROFILER_timestruct</type>
+          <declname>PROFILER_end_time</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>PROFILER_instance_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">@ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PROFILER_timestruct PROFILER_begin_time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">@ref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PROFILER_timestruct PROFILER_end_time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">int32_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PROFILER_instance_index </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" line="124" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.h" bodystart="124" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="define">
       <memberdef kind="define" id="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1ga775939d541e95ea75e6e7066a1cc6bcb" prot="public" static="no">
         <name>PROFILER_TOTAL_PROFILERS</name>

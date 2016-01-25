@@ -4,29 +4,29 @@
     <compoundname>PROFILING_tools.c</compoundname>
     <includes refid="_p_r_o_f_i_l_i_n_g__tools_8h" local="yes">PROFILING_tools.h</includes>
     <incdepgraph>
-      <node id="9">
+      <node id="22">
         <label>stdint.h</label>
       </node>
-      <node id="6">
+      <node id="19">
         <label>PROFILING_tools.c</label>
         <link refid="PROFILING_tools.c"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="23">
         <label>time.h</label>
       </node>
-      <node id="7">
+      <node id="20">
         <label>PROFILING_tools.h</label>
         <link refid="_p_r_o_f_i_l_i_n_g__tools_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="21">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
@@ -36,14 +36,14 @@
         <definition>int32_t PROFILER_instance_last_index</definition>
         <argsstring></argsstring>
         <name>PROFILER_instance_last_index</name>
-        <initializer> 0</initializer>
+        <initializer> <ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1adfa1dd598814dd5a5c73276c47cba92d" kindref="member">PROFILER_INSTANCE_NOT_INITIALIZED</ref></initializer>
         <briefdescription>
-        </briefdescription>
+<para>Индекс последнего инициализированного профилировщика. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Инициализирован значением PROFILER_INSTANCE_NOT_INITIALIZED, поскольку в начальный момент ни один профилировщик ещё не инициализирован. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="33" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="33" bodyend="-1"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="37" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8c_1a4a6d43d39df094028e3dd5f183ebf417" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="39" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="39" bodyend="-1"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="43" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8c_1a56549ee8316aec663f3d5e77350c53d8" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="45" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="45" bodyend="-1"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="49" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8c_1afebf7705a885e5a8f0e2e0e51f77e04a" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="51" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="51" bodyend="-1"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="55" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8c_1a9f472cfb52fb98b33b6ca7792d803d25" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -99,10 +99,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="57" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="57" bodyend="-1"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="61" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="_p_r_o_f_i_l_i_n_g__tools_8c_1a7a0dd61f5e00f85f4912351152587d33" prot="public" static="no" mutable="no">
-        <type>PROFILER_timestruct</type>
+        <type><ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1gae02193769f3b21a09fc0d5035e566a75" kindref="member">PROFILER_timestruct</ref></type>
         <definition>PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS]</definition>
         <argsstring>[PROFILER_TOTAL_PROFILERS]</argsstring>
         <name>PROFILER_total_times</name>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="63" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="63" bodyend="-1"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="67" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="67" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="66" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="66" bodyend="69"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="70" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="70" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8c_1a1e26be567967e92be3dc159c3350ba8b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="71" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="71" bodyend="73"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="75" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="75" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8c_1a88699f475716bd94088101eadfc1c276" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="75" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="75" bodyend="78"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="79" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="79" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8c_1a58f06a33cb12fa25bf2e36dd66bde8a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -179,77 +179,77 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="80" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="80" bodyend="87"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="84" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="84" bodyend="91"/>
       </memberdef>
-      <memberdef kind="function" id="_p_r_o_f_i_l_i_n_g__tools_8c_1a2f57ecff908155818a48144e366f7c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga2f57ecff908155818a48144e366f7c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PROFILER_log</definition>
         <argsstring>()</argsstring>
         <name>PROFILER_log</name>
         <briefdescription>
-        </briefdescription>
+<para>Вывести отчёт о работе профилировщика. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Сообщает затраченное на работу каждого профилировщика время, имена файлов, номера строк, названия функций где был создан данный профилировщик. Также сообщает число вызовов данного профилировщика. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="90" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="90" bodyend="95"/>
+        <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" line="94" bodyfile="/home/ruslan/EmbedPROFILER/PROFILING_tools.c" bodystart="94" bodyend="99"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Файл <ref refid="_p_r_o_f_i_l_i_n_g__tools_8c" kindref="compound">PROFILING_tools.c</ref> является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени вызовов. Профилировщик времени вызовов - средство анализа исходного кода программ, представляющее программистам и инженерам анализировать время, затраченное на выполнение того или иного участка кода в процентном соотношении (относительно общего времени работы профилировщика). </para>    </briefdescription>
+<para>Файл <ref refid="_p_r_o_f_i_l_i_n_g__tools_8c" kindref="compound">PROFILING_tools.c</ref> является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени вызовов. </para>    </briefdescription>
     <detaileddescription>
 <para><simplesect kind="author"><para>Sergeev Ruslan. OOO SPUTNIX, MIPT High-Precision Attitude Control Systems Laboratory </para></simplesect>
 <simplesect kind="version"><para>V1.0.0 </para></simplesect>
-<simplesect kind="date"><para>23-January-2016 </para></simplesect>
+<simplesect kind="date"><para>23-January-2016 Профилировщик времени вызовов - средство анализа исходного кода программ, представляющее программистам и инженерам анализировать время, затраченное на выполнение того или иного участка кода в процентном соотношении (относительно общего времени работы профилировщика).</para></simplesect>
 <simplesect kind="attention"><para>THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME. AS A RESULT, OOO SPUTNIX, MIPT High-Precision Attitude Control Systems Laboratory SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.</para></simplesect>
 <heading level="2"><center><copy/> COPYRIGHT 2016 RUSLAN SERGEEV</center></heading>
 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_p_r_o_f_i_l_i_n_g__tools_8h" kindref="compound" tooltip="Файл PROFILING_tools.h является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени в...">PROFILING_tools.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal">int32_t<sp/>PROFILER_instance_last_index<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>PROFILER_files_names[PROFILER_TOTAL_PROFILERS]<sp/>=<sp/>{0};</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>PROFILER_procedures_names[PROFILER_TOTAL_PROFILERS]<sp/>=<sp/>{0};</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal">uint32_t<sp/>PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS]<sp/>=<sp/>{0};</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">uint32_t<sp/>PROFILER_times_called[PROFILER_TOTAL_PROFILERS]<sp/>=<sp/>{0};</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">PROFILER_timestruct<sp/>PROFILER_total_times[PROFILER_TOTAL_PROFILERS]<sp/>=<sp/>{0};</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PROFILER_timestamp_diff_to_float(int32_t<sp/>PROFILER_instance_index){</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(PROFILER_total_times[PROFILER_instance_index]).tv_sec<sp/>+</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(PROFILER_total_times[PROFILER_instance_index]).tv_nsec*1.e-9;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PROFILER_calculate_all_profiles_average(){</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PROFILER_timestamp_diff_to_float(PROFILER_GLOBAL_PROFILE_INDEX);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PROFILER_get_current_profile_average(int32_t<sp/>PROFILER_instance_index){</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PROFILER_total_average<sp/>=<sp/>PROFILER_calculate_all_profiles_average();</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>100*PROFILER_timestamp_diff_to_float(PROFILER_instance_index)/PROFILER_total_average;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PROFILER_log_instance(uint16_t<sp/>PROFILER_instance_index){</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;[file<sp/>%s,<sp/>line<sp/>%d<sp/><sp/>fun:%s]<sp/>times<sp/>called:<sp/>%u<sp/>average:<sp/>%f%%\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_files_names[PROFILER_instance_index],</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_lines_numbers[PROFILER_instance_index],</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_procedures_names[PROFILER_instance_index],</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_times_called[PROFILER_instance_index],</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_get_current_profile_average(PROFILER_instance_index));</highlight></codeline>
-<codeline lineno="87"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PROFILER_log(){</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_calculate_all_profiles_average();</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(int32_t<sp/>PROFILER_instance_index<sp/>=<sp/>PROFILER_LOCAL_PROFILES_BEGIN;<sp/>PROFILER_instance_index&lt;PROFILER_instance_last_index;<sp/>++PROFILER_instance_index){</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_log_instance(PROFILER_instance_index);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ab45d681232a34daa38cb1419306a1bf2" refkind="member"><highlight class="normal">int32_t<sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8c_1ab45d681232a34daa38cb1419306a1bf2" kindref="member" tooltip="Индекс последнего инициализированного профилировщика.">PROFILER_instance_last_index</ref><sp/>=<sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1adfa1dd598814dd5a5c73276c47cba92d" kindref="member" tooltip="Определяет неинициализированный индекс.">PROFILER_INSTANCE_NOT_INITIALIZED</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>PROFILER_files_names[<ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga775939d541e95ea75e6e7066a1cc6bcb" kindref="member" tooltip="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>PROFILER_procedures_names[<ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga775939d541e95ea75e6e7066a1cc6bcb" kindref="member" tooltip="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">uint32_t<sp/>PROFILER_lines_numbers[<ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga775939d541e95ea75e6e7066a1cc6bcb" kindref="member" tooltip="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">uint32_t<sp/>PROFILER_times_called[<ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga775939d541e95ea75e6e7066a1cc6bcb" kindref="member" tooltip="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1gae02193769f3b21a09fc0d5035e566a75" kindref="member" tooltip="Тип переменной для хранения измерений времени.">PROFILER_timestruct</ref><sp/>PROFILER_total_times[<ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga775939d541e95ea75e6e7066a1cc6bcb" kindref="member" tooltip="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PROFILER_timestamp_diff_to_float(int32_t<sp/>PROFILER_instance_index){</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(PROFILER_total_times[PROFILER_instance_index]).tv_sec<sp/>+</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(PROFILER_total_times[PROFILER_instance_index]).tv_nsec*1.e-9;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PROFILER_calculate_all_profiles_average(){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PROFILER_timestamp_diff_to_float(<ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a39949f1889adb640b9d00c1e794e4038" kindref="member" tooltip="Индекс &amp;quot;глобального профиллировщика&amp;quot; - начального и главного профилировщика времени вызовов...">PROFILER_GLOBAL_PROFILE_INDEX</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PROFILER_get_current_profile_average(int32_t<sp/>PROFILER_instance_index){</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PROFILER_total_average<sp/>=<sp/>PROFILER_calculate_all_profiles_average();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>100*PROFILER_timestamp_diff_to_float(PROFILER_instance_index)/PROFILER_total_average;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PROFILER_log_instance(uint16_t<sp/>PROFILER_instance_index){</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;[file<sp/>%s,<sp/><sp/>line<sp/>%d,<sp/><sp/>fun:<sp/>%s]<sp/>times<sp/>called:<sp/>%u,<sp/><sp/>average:<sp/>%f%%\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_files_names[PROFILER_instance_index],</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_lines_numbers[PROFILER_instance_index],</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_procedures_names[PROFILER_instance_index],</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_times_called[PROFILER_instance_index],</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_get_current_profile_average(PROFILER_instance_index));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga2f57ecff908155818a48144e366f7c57" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga2f57ecff908155818a48144e366f7c57" kindref="member" tooltip="Вывести отчёт о работе профилировщика.">PROFILER_log</ref>(){</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_calculate_all_profiles_average();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(int32_t<sp/>PROFILER_instance_index<sp/>=<sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a27d5c6f98201a8f99357c6a5c4b82e66" kindref="member" tooltip="Начальный индекс локальных профилировщиков.">PROFILER_LOCAL_PROFILES_BEGIN</ref>;<sp/>PROFILER_instance_index&lt;=<ref refid="_p_r_o_f_i_l_i_n_g__tools_8c_1ab45d681232a34daa38cb1419306a1bf2" kindref="member" tooltip="Индекс последнего инициализированного профилировщика.">PROFILER_instance_last_index</ref>;<sp/>++PROFILER_instance_index){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_log_instance(PROFILER_instance_index);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
     </programlisting>
     <location file="/home/ruslan/EmbedPROFILER/PROFILING_tools.c"/>
   </compounddef>

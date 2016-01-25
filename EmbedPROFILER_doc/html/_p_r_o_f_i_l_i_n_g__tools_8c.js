@@ -2,7 +2,7 @@ var _p_r_o_f_i_l_i_n_g__tools_8c =
 [
     [ "PROFILER_calculate_all_profiles_average", "_p_r_o_f_i_l_i_n_g__tools_8c.html#a1e26be567967e92be3dc159c3350ba8b", null ],
     [ "PROFILER_get_current_profile_average", "_p_r_o_f_i_l_i_n_g__tools_8c.html#a88699f475716bd94088101eadfc1c276", null ],
-    [ "PROFILER_log", "_p_r_o_f_i_l_i_n_g__tools_8c.html#a2f57ecff908155818a48144e366f7c57", null ],
+    [ "PROFILER_log", "group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga2f57ecff908155818a48144e366f7c57", null ],
     [ "PROFILER_log_instance", "_p_r_o_f_i_l_i_n_g__tools_8c.html#a58f06a33cb12fa25bf2e36dd66bde8a0", null ],
     [ "PROFILER_timestamp_diff_to_float", "_p_r_o_f_i_l_i_n_g__tools_8c.html#ae330b8ff7528c2097da4dc17442b5cba", null ],
     [ "PROFILER_files_names", "_p_r_o_f_i_l_i_n_g__tools_8c.html#a4a6d43d39df094028e3dd5f183ebf417", null ],

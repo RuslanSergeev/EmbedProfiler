@@ -30,14 +30,14 @@
  <tbody>
  <tr style="height: 56px;">
   
-  <td id="projectlogo"><img alt="Logo" src="soft_bug.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="suft_bug_100x100.png"/></td>
   
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">EmbedPROFILER
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">текущая версия: 1.0</span>
    </div>
-   <div id="projectbrief">Оптимизируя ваше время ...</div>
+   <div id="projectbrief">На страже вашего времени.</div>
   </td>
   
   
@@ -57,6 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
       <li><a href="modules.html"><span>Группы</span></a></li>
       <li><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
       <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="examples.html"><span>Примеры</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -111,57 +112,77 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;stdint.h&gt;</code><br/>
 <code>#include &lt;time.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для PROFILING_tools.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_p_r_o_f_i_l_i_n_g__tools_8h__incl.png" border="0" usemap="#_p_r_o_f_i_l_i_n_g__tools_8h" alt=""/></div>
+<map name="_p_r_o_f_i_l_i_n_g__tools_8h" id="_p_r_o_f_i_l_i_n_g__tools_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="_p_r_o_f_i_l_i_n_g__tools_8h__dep__incl.png" border="0" usemap="#_p_r_o_f_i_l_i_n_g__tools_8hdep" alt=""/></div>
+<map name="_p_r_o_f_i_l_i_n_g__tools_8hdep" id="_p_r_o_f_i_l_i_n_g__tools_8hdep">
+</map>
+</div>
 </div>
 <p><a href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">См. исходные тексты.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Макросы</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga775939d541e95ea75e6e7066a1cc6bcb"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_TOTAL_PROFILERS" ref="ga775939d541e95ea75e6e7066a1cc6bcb" args="" -->
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_TOTAL_PROFILERS</b>&#160;&#160;&#160;1024</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39949f1889adb640b9d00c1e794e4038"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_GLOBAL_PROFILE_INDEX" ref="a39949f1889adb640b9d00c1e794e4038" args="" -->
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_GLOBAL_PROFILE_INDEX</b>&#160;&#160;&#160;0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27d5c6f98201a8f99357c6a5c4b82e66"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_LOCAL_PROFILES_BEGIN" ref="a27d5c6f98201a8f99357c6a5c4b82e66" args="" -->
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_LOCAL_PROFILES_BEGIN</b>&#160;&#160;&#160;((PROFILER_GLOBAL_PROFILE_INDEX)+1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfa1dd598814dd5a5c73276c47cba92d"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_INSTANCE_NOT_INITIALIZED" ref="adfa1dd598814dd5a5c73276c47cba92d" args="" -->
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_INSTANCE_NOT_INITIALIZED</b>&#160;&#160;&#160;1</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_local_start</b>()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_local_stop</b>()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace0e7b35a5a8584b77492c74994409e0"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_global_start" ref="ace0e7b35a5a8584b77492c74994409e0" args="()" -->
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_global_start</b>()&#160;&#160;&#160;PROFILER_local_start()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a425fb9e92c3523ab2a3581d2cbefb5ce"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_global_stop" ref="a425fb9e92c3523ab2a3581d2cbefb5ce" args="()" -->
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_global_stop</b>()&#160;&#160;&#160;PROFILER_local_stop()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb">PROFILER_TOTAL_PROFILERS</a>&#160;&#160;&#160;1024</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальное число работающих профилировщиков времени вызова.  <a href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a39949f1889adb640b9d00c1e794e4038">PROFILER_GLOBAL_PROFILE_INDEX</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Индекс "глобального профиллировщика" - начального и главного профилировщика времени вызовов.  <a href="#a39949f1889adb640b9d00c1e794e4038"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a27d5c6f98201a8f99357c6a5c4b82e66">PROFILER_LOCAL_PROFILES_BEGIN</a>&#160;&#160;&#160;((<a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a39949f1889adb640b9d00c1e794e4038">PROFILER_GLOBAL_PROFILE_INDEX</a>)+1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Начальный индекс локальных профилировщиков.  <a href="#a27d5c6f98201a8f99357c6a5c4b82e66"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#adfa1dd598814dd5a5c73276c47cba92d">PROFILER_INSTANCE_NOT_INITIALIZED</a>&#160;&#160;&#160;-1</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет неинициализированный индекс.  <a href="#adfa1dd598814dd5a5c73276c47cba92d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a632f3afa2c72dd938e2a5d7e9c1e202e">PROFILER_local_start</a>()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Начинает/продолжает профилировку секции исходного кода.  <a href="#a632f3afa2c72dd938e2a5d7e9c1e202e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#ad8354a6502e89adea8535f4029a15b5f">PROFILER_local_stop</a>()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Окончание работы/вызова локального профилировщика.  <a href="#ad8354a6502e89adea8535f4029a15b5f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga425fb9e92c3523ab2a3581d2cbefb5ce">PROFILER_global_stop</a>()&#160;&#160;&#160;<a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#ad8354a6502e89adea8535f4029a15b5f">PROFILER_local_stop</a>()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Окончание работы глобального профилировщика.  <a href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga425fb9e92c3523ab2a3581d2cbefb5ce"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae02193769f3b21a09fc0d5035e566a75"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_timestruct" ref="gae02193769f3b21a09fc0d5035e566a75" args="" -->
-typedef struct timespec&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_timestruct</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef struct timespec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75">PROFILER_timestruct</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип переменной для хранения измерений времени.  <a href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f57ecff908155818a48144e366f7c57"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_log" ref="a2f57ecff908155818a48144e366f7c57" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_log</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__port.html#ga106b837099d8b52043148fa42592608b">PROFILER_get_current_time</a> (PROFILER_timestruct *PROFILER_timestruct_instance)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">brief description  <a href="group__port.html#ga106b837099d8b52043148fa42592608b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__port.html#ga0072e0d84e203ad6499be54f4b6e14ee">PROFILER_refresh_time_consumed</a> (PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga2f57ecff908155818a48144e366f7c57">PROFILER_log</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывести отчёт о работе профилировщика.  <a href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga2f57ecff908155818a48144e366f7c57"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga106b837099d8b52043148fa42592608b">PROFILER_get_current_time</a> (<a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75">PROFILER_timestruct</a> *PROFILER_timestruct_instance)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить текущее время в системе.  <a href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga106b837099d8b52043148fa42592608b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga0072e0d84e203ad6499be54f4b6e14ee">PROFILER_refresh_time_consumed</a> (<a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75">PROFILER_timestruct</a> PROFILER_begin_time, <a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75">PROFILER_timestruct</a> PROFILER_end_time, int32_t PROFILER_instance_index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновить общее время затраченное на работу указанного профилировщика за все его вызовы.  <a href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga0072e0d84e203ad6499be54f4b6e14ee"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a2629430c71701c51e4c8897a61cd0edb">PROFILER_refresh_times_called</a> (int32_t PROFILER_instance_index)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#af5dcf1143349d3da6f7cadf1b9aaf171">PROFILER_instance_init</a> (const char *file, const char *function, const int32_t line)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновить общее число вызовов данного профилировщика.  <a href="#a2629430c71701c51e4c8897a61cd0edb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a279e6b70c0935894ab8b2f3c2db2cf78">PROFILER_get_free_instance_index</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет индекс следующего свободного профилировщика.  <a href="#a279e6b70c0935894ab8b2f3c2db2cf78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#ab98613156719567b3aab5f675c195f92">PROFILER_instance_init</a> (const char *file, const char *function, const int32_t line, const int32_t PROFILER_instance_index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует экземпляр профилировщика.  <a href="#ab98613156719567b3aab5f675c195f92"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#acf37348ac7f1743ce5ccb80ac04c4944">PROFILER_instance_is_not_initialized</a> (int32_t PROFILER_instance_index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Сообщает инициализирован ли профилировщик или нет.  <a href="#acf37348ac7f1743ce5ccb80ac04c4944"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Переменные</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab45d681232a34daa38cb1419306a1bf2"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_instance_last_index" ref="ab45d681232a34daa38cb1419306a1bf2" args="" -->
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_instance_last_index</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#ab45d681232a34daa38cb1419306a1bf2">PROFILER_instance_last_index</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Индекс последнего инициализированного профилировщика.  <a href="#ab45d681232a34daa38cb1419306a1bf2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0248163891f760fab2d9dacb50cc619f"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_files_names" ref="a0248163891f760fab2d9dacb50cc619f" args="[PROFILER_TOTAL_PROFILERS]" -->
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_files_names</b> [PROFILER_TOTAL_PROFILERS]</td></tr>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_files_names</b> [<a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb">PROFILER_TOTAL_PROFILERS</a>]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45fffccf71b38481f5e095daf56de466"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_procedures_names" ref="a45fffccf71b38481f5e095daf56de466" args="[PROFILER_TOTAL_PROFILERS]" -->
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_procedures_names</b> [PROFILER_TOTAL_PROFILERS]</td></tr>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_procedures_names</b> [<a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb">PROFILER_TOTAL_PROFILERS</a>]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afebf7705a885e5a8f0e2e0e51f77e04a"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_lines_numbers" ref="afebf7705a885e5a8f0e2e0e51f77e04a" args="[PROFILER_TOTAL_PROFILERS]" -->
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_lines_numbers</b> [PROFILER_TOTAL_PROFILERS]</td></tr>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_lines_numbers</b> [<a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb">PROFILER_TOTAL_PROFILERS</a>]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f472cfb52fb98b33b6ca7792d803d25"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_times_called" ref="a9f472cfb52fb98b33b6ca7792d803d25" args="[PROFILER_TOTAL_PROFILERS]" -->
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_times_called</b> [PROFILER_TOTAL_PROFILERS]</td></tr>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_times_called</b> [<a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb">PROFILER_TOTAL_PROFILERS</a>]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a0dd61f5e00f85f4912351152587d33"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_total_times" ref="a7a0dd61f5e00f85f4912351152587d33" args="[PROFILER_TOTAL_PROFILERS]" -->
-PROFILER_timestruct&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_total_times</b> [PROFILER_TOTAL_PROFILERS]</td></tr>
+<a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75">PROFILER_timestruct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_total_times</b> [<a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb">PROFILER_TOTAL_PROFILERS</a>]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43db4527124e67e24e5538824fffcf3e"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_end_time" ref="a43db4527124e67e24e5538824fffcf3e" args="" -->
-static PROFILER_timestruct&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_end_time</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4305bc286fe57f872f38dad768444314"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_instance_index" ref="a4305bc286fe57f872f38dad768444314" args="" -->
-static PROFILER_timestruct int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_instance_index</b></td></tr>
+static <a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75">PROFILER_timestruct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_end_time</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41f5f052e15efcd2d5870b3448fd3cdc"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_instance_index" ref="a41f5f052e15efcd2d5870b3448fd3cdc" args="" -->
+static <a class="el" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75">PROFILER_timestruct</a> int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>PROFILER_instance_index</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa24a6ca95b4977cec3238001927aa22"></a><!-- doxytag: member="PROFILING_tools.h::function" ref="afa24a6ca95b4977cec3238001927aa22" args="" -->
 static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>function</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a031ee87097dac866c201d226e02a629c"></a><!-- doxytag: member="PROFILING_tools.h::line" ref="a031ee87097dac866c201d226e02a629c" args="" -->
@@ -177,12 +198,69 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
 
 <p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a></p>
 </div><hr/><h2>Макросы</h2>
+<a class="anchor" id="a39949f1889adb640b9d00c1e794e4038"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_GLOBAL_PROFILE_INDEX" ref="a39949f1889adb640b9d00c1e794e4038" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a39949f1889adb640b9d00c1e794e4038">PROFILER_GLOBAL_PROFILE_INDEX</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Индекс "глобального профиллировщика" - начального и главного профилировщика времени вызовов. </p>
+<p>Этот профилировщик должен быть вызван в начале работы с системой профилирования времени вызовов. Измеренное глобальным профилировщиком время будет считаться временем работы системы. Проценты потреблённого времени, рассчитанные остальными профилировщиками представляют собой отношение времени работы конкретного профилировщика к времени работы глобального профилировщика: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ average[i] = \frac{PROFILER\_total\_times[i]}{PROFILER\_total\_times[0]} \]" src="form_1.png"/>
+</p>
+ 
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00085">85</a></p>
+
+</div>
+</div>
+<a class="anchor" id="adfa1dd598814dd5a5c73276c47cba92d"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_INSTANCE_NOT_INITIALIZED" ref="adfa1dd598814dd5a5c73276c47cba92d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#adfa1dd598814dd5a5c73276c47cba92d">PROFILER_INSTANCE_NOT_INITIALIZED</a>&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Определяет неинициализированный индекс. </p>
+<p>Используется для определения того является ли данный профилировщик инициализированным или он был вызван впервые и его ещё необходимо инициализировать. </p>
+
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00104">104</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a27d5c6f98201a8f99357c6a5c4b82e66"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_LOCAL_PROFILES_BEGIN" ref="a27d5c6f98201a8f99357c6a5c4b82e66" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a27d5c6f98201a8f99357c6a5c4b82e66">PROFILER_LOCAL_PROFILES_BEGIN</a>&#160;&#160;&#160;((<a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a39949f1889adb640b9d00c1e794e4038">PROFILER_GLOBAL_PROFILE_INDEX</a>)+1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Начальный индекс локальных профилировщиков. </p>
+<p>С данного индекса будут следовать локальные профилировщики - замеряющие время выполнения конкретного локального вызова. </p>
+
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00095">95</a></p>
+
+</div>
+</div>
 <a class="anchor" id="a632f3afa2c72dd938e2a5d7e9c1e202e"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_local_start" ref="a632f3afa2c72dd938e2a5d7e9c1e202e" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PROFILER_local_start</td>
+          <td class="memname">#define <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a632f3afa2c72dd938e2a5d7e9c1e202e">PROFILER_local_start</a></td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -191,15 +269,19 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
 </div>
 <div class="memdoc">
 <b>Макроопределение:</b><div class="fragment"><pre class="fragment">{\
-                static int32_t PROFILER_instance_index = PROFILER_INSTANCE_NOT_INITIALIZED;\
+                static int32_t PROFILER_instance_index = <a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#adfa1dd598814dd5a5c73276c47cba92d" title="Определяет неинициализированный индекс.">PROFILER_INSTANCE_NOT_INITIALIZED</a>;\
                 PROFILER_timestruct PROFILER_begin_time, PROFILER_end_time;\
-                if(<a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#acf37348ac7f1743ce5ccb80ac04c4944">PROFILER_instance_is_not_initialized</a>(PROFILER_instance_index)){\
-            PROFILER_instance_index = <a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#af5dcf1143349d3da6f7cadf1b9aaf171">PROFILER_instance_init</a>(__FILE__, __FUNCTION__, __LINE__);\
+                if(<a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#acf37348ac7f1743ce5ccb80ac04c4944" title="Сообщает инициализирован ли профилировщик или нет.">PROFILER_instance_is_not_initialized</a>(PROFILER_instance_index)){\
+            PROFILER_instance_index = <a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a279e6b70c0935894ab8b2f3c2db2cf78" title="Определяет индекс следующего свободного профилировщика.">PROFILER_get_free_instance_index</a>();\
+            PROFILER_instance_init(__FILE__, __FUNCTION__, __LINE__, PROFILER_instance_index);\
                 }\
         PROFILER_refresh_times_called(PROFILER_instance_index);\
         PROFILER_get_current_time(&amp;PROFILER_begin_time);
 </pre></div>
-<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00150">150</a></p>
+<p>Начинает/продолжает профилировку секции исходного кода. </p>
+<p>Если профилировщик начинает работу впервые, то происходит запись текущего местоположения в соответствующие массивы. Запоминается текущее время. </p>
+
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00204">204</a></p>
 
 </div>
 </div>
@@ -208,7 +290,7 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PROFILER_local_stop</td>
+          <td class="memname">#define <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#ad8354a6502e89adea8535f4029a15b5f">PROFILER_local_stop</a></td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -216,19 +298,46 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
       </table>
 </div>
 <div class="memdoc">
-<b>Макроопределение:</b><div class="fragment"><pre class="fragment"><a class="code" href="group__port.html#ga106b837099d8b52043148fa42592608b" title="brief description">PROFILER_get_current_time</a>(&amp;PROFILER_end_time);\
+<b>Макроопределение:</b><div class="fragment"><pre class="fragment"><a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga106b837099d8b52043148fa42592608b" title="Получить текущее время в системе.">PROFILER_get_current_time</a>(&amp;PROFILER_end_time);\
             PROFILER_refresh_time_consumed(PROFILER_begin_time, PROFILER_end_time, PROFILER_instance_index);\
     }
 </pre></div>
+<p>Окончание работы/вызова локального профилировщика. </p>
+<p>Запоминается время окончания работы/вызова профилировщика. Это время, как и время начала работы/вызова профилировщика используется для обновления общего затраченного времени. Общее затраченное профилировщиком время используется системой профилировки для оценки загруженности профилируемой секции кода. </p>
+
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00225">225</a></p>
+
 </div>
 </div>
 <hr/><h2>Функции</h2>
-<a class="anchor" id="af5dcf1143349d3da6f7cadf1b9aaf171"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_instance_init" ref="af5dcf1143349d3da6f7cadf1b9aaf171" args="(const char *file, const char *function, const int32_t line)" -->
+<a class="anchor" id="a279e6b70c0935894ab8b2f3c2db2cf78"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_get_free_instance_index" ref="a279e6b70c0935894ab8b2f3c2db2cf78" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#af5dcf1143349d3da6f7cadf1b9aaf171">PROFILER_instance_init</a> </td>
+          <td class="memname">int32_t <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a279e6b70c0935894ab8b2f3c2db2cf78">PROFILER_get_free_instance_index</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Определяет индекс следующего свободного профилировщика. </p>
+<p>Когда профилировщик начинает свою работу впервые, система присваивает ему некоторый индекс, посредством которого с профилировщиком в дальнейшем выполняются все остальные манипуляции. </p>
+<dl class="return"><dt><b>Возвращает:</b></dt><dd>int32_t индекс следующего свободного профилировщика </dd></dl>
+
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00271">271</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ab98613156719567b3aab5f675c195f92"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_instance_init" ref="ab98613156719567b3aab5f675c195f92" args="(const char *file, const char *function, const int32_t line, const int32_t PROFILER_instance_index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#ab98613156719567b3aab5f675c195f92">PROFILER_instance_init</a> </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>file</em>, </td>
@@ -243,7 +352,13 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int32_t&#160;</td>
-          <td class="paramname"><em>line</em>&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int32_t&#160;</td>
+          <td class="paramname"><em>PROFILER_instance_index</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -253,17 +368,24 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
       </table>
 </div>
 <div class="memdoc">
+
+<p>Инициализирует экземпляр профилировщика. </p>
+<p>Когда профилировщик начинает свою работу впервые, система профилировки запоминает его положение в исходном коде. </p>
 <dl class="params"><dt><b>Аргументы:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">const</td><td>char *file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">const</td><td>char *function </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">const</td><td>int32_t line </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">const</td><td>char *file <br/>
+ Название файла, в котором работает профилировщик. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">const</td><td>char *function <br/>
+ Название функции, в которой работает профилировщик. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">const</td><td>int32_t line <br/>
+ Номер строки, в которой начинается выполнение профилировщика. Профилировщик измеряет время выполнения сегмента кода от этой строки до вызова PROFILIER_local_stop() </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">const</td><td>int32_t PROFILER_instance_index <br/>
+ Индекс инициализируемого профилировщика. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Возвращает:</b></dt><dd></dd></dl>
 
-<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00189">189</a></p>
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00297">297</a></p>
 
 </div>
 </div>
@@ -281,15 +403,19 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
       </table>
 </div>
 <div class="memdoc">
+
+<p>Сообщает инициализирован ли профилировщик или нет. </p>
+<p>Возвращает 0, если профилировщик ещё не инициализирован (работает впервые). Возвращает значение отличное от 0, если профилировщик уже не нуждается в инициализации (работает не в первые). </p>
 <dl class="params"><dt><b>Аргументы:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">int32_t</td><td>PROFILER_instance_index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int32_t</td><td>PROFILER_instance_index <br/>
+ Индекс профилировщика. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Возвращает:</b></dt><dd></dd></dl>
 
-<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00203">203</a></p>
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00314">314</a></p>
 
 </div>
 </div>
@@ -307,14 +433,37 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
       </table>
 </div>
 <div class="memdoc">
+
+<p>Обновить общее число вызовов данного профилировщика. </p>
+<p>Общее число вызовов профилировщика даёт понять, сколько раз управление достигло секции, которую профилирует данный профилировщик. </p>
 <dl class="params"><dt><b>Аргументы:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">int32_t</td><td>PROFILER_instance_index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int32_t</td><td>PROFILER_instance_index <br/>
+ Индекс локального профилировщика. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00142">142</a></p>
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html">PROFILING_tools.h</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h_source.html#l00192">192</a></p>
+
+</div>
+</div>
+<hr/><h2>Переменные</h2>
+<a class="anchor" id="ab45d681232a34daa38cb1419306a1bf2"></a><!-- doxytag: member="PROFILING_tools.h::PROFILER_instance_last_index" ref="ab45d681232a34daa38cb1419306a1bf2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#ab45d681232a34daa38cb1419306a1bf2">PROFILER_instance_last_index</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Индекс последнего инициализированного профилировщика. </p>
+<p>Инициализирован значением PROFILER_INSTANCE_NOT_INITIALIZED, поскольку в начальный момент ни один профилировщик ещё не инициализирован. </p>
+
+<p>См. определение в файле <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8c_source.html">PROFILING_tools.c</a> строка <a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8c_source.html#l00037">37</a></p>
 
 </div>
 </div>
@@ -325,7 +474,7 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -338,7 +487,7 @@ static const char const int32_t&#160;</td><td class="memItemRight" valign="botto
     <ul>
       <li class="navelem"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8h.html">PROFILING_tools.h</a>      </li>
 
-    <li class="footer">Документация по EmbedPROFILER. Последние изменения: Пн 25 Янв 2016 04:02:36. Создано системой
+    <li class="footer">Документация по EmbedPROFILER. Последние изменения: Вт 26 Янв 2016 00:37:02. Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

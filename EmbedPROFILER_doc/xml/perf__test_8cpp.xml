@@ -150,34 +150,34 @@
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__attribute__((always_inline))</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">void<sp/>Increment_I(<ref refid="struct_my__struct" kindref="compound">My_struct</ref><sp/>*struct_ptr){</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_local_start();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kindref="member" tooltip="Начинает/продолжает профилировку секции исходного кода.">PROFILER_local_start</ref>();</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint16_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;100;<sp/>++i){</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;some<sp/>message:)!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct_ptr-&gt;I<sp/>+=<sp/>1.;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_local_stop();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kindref="member" tooltip="Окончание работы/вызова локального профилировщика.">PROFILER_local_stop</ref>();</highlight></codeline>
 <codeline lineno="31"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><ref refid="class_my__class" kindref="compound">My_class</ref><sp/>obj;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><ref refid="struct_my__struct" kindref="compound">My_struct</ref><sp/>str;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]){</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_global_start();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ace0e7b35a5a8584b77492c74994409e0" kindref="member" tooltip="Начало работы глобального профилировщика.">PROFILER_global_start</ref>();</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_local_start();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kindref="member" tooltip="Начинает/продолжает профилировку секции исходного кода.">PROFILER_local_start</ref>();</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>Increment_I(&amp;str);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_local_stop();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kindref="member" tooltip="Окончание работы/вызова локального профилировщика.">PROFILER_local_stop</ref>();</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_local_start();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kindref="member" tooltip="Начинает/продолжает профилировку секции исходного кода.">PROFILER_local_start</ref>();</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Increment_I(&amp;str);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_local_stop();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kindref="member" tooltip="Окончание работы/вызова локального профилировщика.">PROFILER_local_stop</ref>();</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_local_start();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kindref="member" tooltip="Начинает/продолжает профилировку секции исходного кода.">PROFILER_local_start</ref>();</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>Increment_I(&amp;str);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>PROFILER_local_stop();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kindref="member" tooltip="Окончание работы/вызова локального профилировщика.">PROFILER_local_stop</ref>();</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_global_stop();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_log();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a425fb9e92c3523ab2a3581d2cbefb5ce" kindref="member" tooltip="Окончание работы глобального профилировщика.">PROFILER_global_stop</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga2f57ecff908155818a48144e366f7c57" kindref="member" tooltip="Вывести отчёт о работе профайлера.">PROFILER_log</ref>();</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>

@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_embed_p_r_o_f_i_l_e_r__doc_2profiler__example_8cpp" kind="file">
+    <compoundname>profiler_example.cpp</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="_p_r_o_f_i_l_i_n_g__tools_8h" local="yes">PROFILING_tools.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="2">
+        <label>time.h</label>
+      </node>
+      <node id="3">
+        <label>PROFILING_tools.h</label>
+        <link refid="_p_r_o_f_i_l_i_n_g__tools_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>stdio.h</label>
+      </node>
+      <node id="0">
+        <label>EmbedPROFILER_doc/profiler_example.cpp</label>
+        <link refid="EmbedPROFILER_doc/profiler_example.cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_my__class" prot="public">My_class</innerclass>
+    <innerclass refid="struct_my__struct" prot="public">My_struct</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_embed_p_r_o_f_i_l_e_r__doc_2profiler__example_8cpp_1a7dd05107306bc2073b85a2eb042387d7" prot="public" static="no">
+        <type>struct <ref refid="struct_my__struct" kindref="compound">My_struct</ref></type>
+        <definition>typedef struct My_struct My_struct</definition>
+        <argsstring></argsstring>
+        <name>My_struct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" line="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_embed_p_r_o_f_i_l_e_r__doc_2profiler__example_8cpp_1a626436c536210767bab23ce4760a7027" prot="public" static="no" mutable="no">
+        <type><ref refid="class_my__class" kindref="compound">My_class</ref></type>
+        <definition>My_class obj</definition>
+        <argsstring></argsstring>
+        <name>obj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" line="33" bodyfile="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_embed_p_r_o_f_i_l_e_r__doc_2profiler__example_8cpp_1a4188a03db08c2841d4b547ade3f8c32e" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_my__struct" kindref="compound">My_struct</ref></type>
+        <definition>My_struct str</definition>
+        <argsstring></argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" line="34" bodyfile="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_embed_p_r_o_f_i_l_e_r__doc_2profiler__example_8cpp_1a4d9722828c291b86b9a066b34bb12dea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static __attribute__</definition>
+        <argsstring>((always_inline)) void Increment_I(My_struct *struct_ptr)</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(always_inline)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" line="24" bodyfile="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" bodystart="23" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="_embed_p_r_o_f_i_l_e_r__doc_2profiler__example_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" line="36" bodyfile="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp" bodystart="36" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_p_r_o_f_i_l_i_n_g__tools_8h" kindref="compound" tooltip="Файл PROFILING_tools.h является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени в...">PROFILING_tools.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_my__class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_my__class" kindref="compound">My_class</ref>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_my__class" kindref="compound">My_class</ref>():I(0){};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>I;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Increment_I(){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint16_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;1000;<sp/>++i){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;I<sp/>+=<sp/>1.;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="struct_my__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_my__struct" kindref="compound">My_struct</ref>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>I;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}<ref refid="struct_my__struct" kindref="compound">My_struct</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>__attribute__((always_inline))</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">void<sp/>Increment_I(<ref refid="struct_my__struct" kindref="compound">My_struct</ref><sp/>*struct_ptr){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kindref="member" tooltip="Начинает/продолжает профилировку секции исходного кода.">PROFILER_local_start</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint16_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;100;<sp/>++i){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;some<sp/>message:)!\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct_ptr-&gt;I<sp/>+=<sp/>1.;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kindref="member" tooltip="Окончание работы/вызова локального профилировщика.">PROFILER_local_stop</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="class_my__class" kindref="compound">My_class</ref><sp/>obj;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="struct_my__struct" kindref="compound">My_struct</ref><sp/>str;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROFILER_global_start();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kindref="member" tooltip="Начинает/продолжает профилировку секции исходного кода.">PROFILER_local_start</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>Increment_I(&amp;str);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kindref="member" tooltip="Окончание работы/вызова локального профилировщика.">PROFILER_local_stop</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kindref="member" tooltip="Начинает/продолжает профилировку секции исходного кода.">PROFILER_local_start</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Increment_I(&amp;str);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kindref="member" tooltip="Окончание работы/вызова локального профилировщика.">PROFILER_local_stop</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kindref="member" tooltip="Начинает/продолжает профилировку секции исходного кода.">PROFILER_local_start</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>Increment_I(&amp;str);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kindref="member" tooltip="Окончание работы/вызова локального профилировщика.">PROFILER_local_stop</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga425fb9e92c3523ab2a3581d2cbefb5ce" kindref="member" tooltip="Окончание работы глобального профилировщика.">PROFILER_global_stop</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga2f57ecff908155818a48144e366f7c57" kindref="member" tooltip="Вывести отчёт о работе профилировщика.">PROFILER_log</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ruslan/EmbedPROFILER/EmbedPROFILER_doc/profiler_example.cpp"/>
+  </compounddef>
+</doxygen>

@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/perf_test.cpp" line="11" bodyfile="/home/ruslan/EmbedPROFILER/perf_test.cpp" bodystart="10" bodyend="-1"/>
+        <location file="/home/ruslan/EmbedPROFILER/profiler_example.cpp" line="13" bodyfile="/home/ruslan/EmbedPROFILER/profiler_example.cpp" bodystart="12" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/perf_test.cpp" line="10" bodyfile="/home/ruslan/EmbedPROFILER/perf_test.cpp" bodystart="10" bodyend="10"/>
+        <location file="/home/ruslan/EmbedPROFILER/profiler_example.cpp" line="12" bodyfile="/home/ruslan/EmbedPROFILER/profiler_example.cpp" bodystart="12" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="class_my__class_1a46797d09f0df1bc7622537900c1277c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -42,14 +42,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/perf_test.cpp" line="12" bodyfile="/home/ruslan/EmbedPROFILER/perf_test.cpp" bodystart="12" bodyend="16"/>
+        <location file="/home/ruslan/EmbedPROFILER/profiler_example.cpp" line="14" bodyfile="/home/ruslan/EmbedPROFILER/profiler_example.cpp" bodystart="14" bodyend="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ruslan/EmbedPROFILER/perf_test.cpp" line="6" bodyfile="/home/ruslan/EmbedPROFILER/perf_test.cpp" bodystart="6" bodyend="17"/>
+    <location file="/home/ruslan/EmbedPROFILER/profiler_example.cpp" line="8" bodyfile="/home/ruslan/EmbedPROFILER/profiler_example.cpp" bodystart="8" bodyend="19"/>
     <listofallmembers>
       <member refid="class_my__class_1a8ea34b2e963fe95ccac1975beb7fff6a" prot="public" virt="non-virtual"><scope>My_class</scope><name>I</name></member>
       <member refid="class_my__class_1a46797d09f0df1bc7622537900c1277c1" prot="public" virt="non-virtual"><scope>My_class</scope><name>Increment_I</name></member>

@@ -8,12 +8,12 @@
   <compound refid="struct_my__struct" kind="struct"><name>My_struct</name>
     <member refid="struct_my__struct_1a8ea34b2e963fe95ccac1975beb7fff6a" kind="variable"><name>I</name></member>
   </compound>
-  <compound refid="perf__test_8cpp" kind="file"><name>perf_test.cpp</name>
-    <member refid="perf__test_8cpp_1a7dd05107306bc2073b85a2eb042387d7" kind="typedef"><name>My_struct</name></member>
-    <member refid="perf__test_8cpp_1a626436c536210767bab23ce4760a7027" kind="variable"><name>obj</name></member>
-    <member refid="perf__test_8cpp_1a4188a03db08c2841d4b547ade3f8c32e" kind="variable"><name>str</name></member>
-    <member refid="perf__test_8cpp_1a4d9722828c291b86b9a066b34bb12dea" kind="function"><name>__attribute__</name></member>
-    <member refid="perf__test_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  <compound refid="profiler__example_8cpp" kind="file"><name>profiler_example.cpp</name>
+    <member refid="profiler__example_8cpp_1a7dd05107306bc2073b85a2eb042387d7" kind="typedef"><name>My_struct</name></member>
+    <member refid="profiler__example_8cpp_1a626436c536210767bab23ce4760a7027" kind="variable"><name>obj</name></member>
+    <member refid="profiler__example_8cpp_1a4188a03db08c2841d4b547ade3f8c32e" kind="variable"><name>str</name></member>
+    <member refid="profiler__example_8cpp_1a4d9722828c291b86b9a066b34bb12dea" kind="function"><name>__attribute__</name></member>
+    <member refid="profiler__example_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
   <compound refid="_p_r_o_f_i_l_i_n_g__tools_8c" kind="file"><name>PROFILING_tools.c</name>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8c_1ab45d681232a34daa38cb1419306a1bf2" kind="variable"><name>PROFILER_instance_last_index</name></member>
@@ -26,18 +26,17 @@
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8c_1a1e26be567967e92be3dc159c3350ba8b" kind="function"><name>PROFILER_calculate_all_profiles_average</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8c_1a88699f475716bd94088101eadfc1c276" kind="function"><name>PROFILER_get_current_profile_average</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8c_1a58f06a33cb12fa25bf2e36dd66bde8a0" kind="function"><name>PROFILER_log_instance</name></member>
-    <member refid="_p_r_o_f_i_l_i_n_g__tools_8c_1a2f57ecff908155818a48144e366f7c57" kind="function"><name>PROFILER_log</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga2f57ecff908155818a48144e366f7c57" kind="function"><name>PROFILER_log</name></member>
   </compound>
   <compound refid="_p_r_o_f_i_l_i_n_g__tools_8h" kind="file"><name>PROFILING_tools.h</name>
-    <member refid="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1ga775939d541e95ea75e6e7066a1cc6bcb" kind="define"><name>PROFILER_TOTAL_PROFILERS</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga775939d541e95ea75e6e7066a1cc6bcb" kind="define"><name>PROFILER_TOTAL_PROFILERS</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a39949f1889adb640b9d00c1e794e4038" kind="define"><name>PROFILER_GLOBAL_PROFILE_INDEX</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a27d5c6f98201a8f99357c6a5c4b82e66" kind="define"><name>PROFILER_LOCAL_PROFILES_BEGIN</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1adfa1dd598814dd5a5c73276c47cba92d" kind="define"><name>PROFILER_INSTANCE_NOT_INITIALIZED</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a632f3afa2c72dd938e2a5d7e9c1e202e" kind="define"><name>PROFILER_local_start</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ad8354a6502e89adea8535f4029a15b5f" kind="define"><name>PROFILER_local_stop</name></member>
-    <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ace0e7b35a5a8584b77492c74994409e0" kind="define"><name>PROFILER_global_start</name></member>
-    <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a425fb9e92c3523ab2a3581d2cbefb5ce" kind="define"><name>PROFILER_global_stop</name></member>
-    <member refid="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1gae02193769f3b21a09fc0d5035e566a75" kind="typedef"><name>PROFILER_timestruct</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga425fb9e92c3523ab2a3581d2cbefb5ce" kind="define"><name>PROFILER_global_stop</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1gae02193769f3b21a09fc0d5035e566a75" kind="typedef"><name>PROFILER_timestruct</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ab45d681232a34daa38cb1419306a1bf2" kind="variable"><name>PROFILER_instance_last_index</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a0248163891f760fab2d9dacb50cc619f" kind="variable"><name>PROFILER_files_names</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a45fffccf71b38481f5e095daf56de466" kind="variable"><name>PROFILER_procedures_names</name></member>
@@ -45,23 +44,26 @@
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a9f472cfb52fb98b33b6ca7792d803d25" kind="variable"><name>PROFILER_times_called</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a7a0dd61f5e00f85f4912351152587d33" kind="variable"><name>PROFILER_total_times</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a43db4527124e67e24e5538824fffcf3e" kind="variable"><name>PROFILER_end_time</name></member>
-    <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a4305bc286fe57f872f38dad768444314" kind="variable"><name>PROFILER_instance_index</name></member>
+    <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a41f5f052e15efcd2d5870b3448fd3cdc" kind="variable"><name>PROFILER_instance_index</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1afa24a6ca95b4977cec3238001927aa22" kind="variable"><name>function</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a031ee87097dac866c201d226e02a629c" kind="variable"><name>line</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a4114e96da13fc00d62fc2f0ab301e996" kind="function"><name>__attribute__</name></member>
-    <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a2f57ecff908155818a48144e366f7c57" kind="function"><name>PROFILER_log</name></member>
-    <member refid="group__port_1ga106b837099d8b52043148fa42592608b" kind="function"><name>PROFILER_get_current_time</name></member>
-    <member refid="group__port_1ga0072e0d84e203ad6499be54f4b6e14ee" kind="function"><name>PROFILER_refresh_time_consumed</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga2f57ecff908155818a48144e366f7c57" kind="function"><name>PROFILER_log</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga106b837099d8b52043148fa42592608b" kind="function"><name>PROFILER_get_current_time</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga0072e0d84e203ad6499be54f4b6e14ee" kind="function"><name>PROFILER_refresh_time_consumed</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a2629430c71701c51e4c8897a61cd0edb" kind="function"><name>PROFILER_refresh_times_called</name></member>
-    <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1af5dcf1143349d3da6f7cadf1b9aaf171" kind="function"><name>PROFILER_instance_init</name></member>
+    <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1a279e6b70c0935894ab8b2f3c2db2cf78" kind="function"><name>PROFILER_get_free_instance_index</name></member>
+    <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1ab98613156719567b3aab5f675c195f92" kind="function"><name>PROFILER_instance_init</name></member>
     <member refid="_p_r_o_f_i_l_i_n_g__tools_8h_1acf37348ac7f1743ce5ccb80ac04c4944" kind="function"><name>PROFILER_instance_is_not_initialized</name></member>
   </compound>
-  <compound refid="group___configuration__section__for___embed_p_r_o_f_i_l_e_r" kind="group"><name>Configuration_section_for_EmbedPROFILER</name>
-    <member refid="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1gae02193769f3b21a09fc0d5035e566a75" kind="typedef"><name>PROFILER_timestruct</name></member>
-    <member refid="group___configuration__section__for___embed_p_r_o_f_i_l_e_r_1ga775939d541e95ea75e6e7066a1cc6bcb" kind="define"><name>PROFILER_TOTAL_PROFILERS</name></member>
+  <compound refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3" kind="group"><name>Портируемая_секция</name>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1gae02193769f3b21a09fc0d5035e566a75" kind="typedef"><name>PROFILER_timestruct</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga2f57ecff908155818a48144e366f7c57" kind="function"><name>PROFILER_log</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga106b837099d8b52043148fa42592608b" kind="function"><name>PROFILER_get_current_time</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga0072e0d84e203ad6499be54f4b6e14ee" kind="function"><name>PROFILER_refresh_time_consumed</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga775939d541e95ea75e6e7066a1cc6bcb" kind="define"><name>PROFILER_TOTAL_PROFILERS</name></member>
+    <member refid="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_1ga425fb9e92c3523ab2a3581d2cbefb5ce" kind="define"><name>PROFILER_global_stop</name></member>
   </compound>
-  <compound refid="group__port" kind="group"><name>port</name>
-    <member refid="group__port_1ga106b837099d8b52043148fa42592608b" kind="function"><name>PROFILER_get_current_time</name></member>
-    <member refid="group__port_1ga0072e0d84e203ad6499be54f4b6e14ee" kind="function"><name>PROFILER_refresh_time_consumed</name></member>
+  <compound refid="profiler_example_8cpp-example" kind="example"><name>profiler_example.cpp</name>
   </compound>
 </doxygenindex>

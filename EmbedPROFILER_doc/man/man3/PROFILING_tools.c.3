@@ -1,0 +1,83 @@
+.TH "PROFILING_tools.c" 3 "Вт 26 Янв 2016" "Version текущая версия: 1.0" "EmbedPROFILER" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PROFILING_tools.c \- 
+.PP
+Файл \fBPROFILING_tools\&.c\fP является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени вызовов\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'PROFILING_tools\&.h'\fP
+.br
+
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "void \fBPROFILER_log\fP ()"
+.br
+.RI "\fIВывести отчёт о работе профилировщика\&. \fP"
+.in -1c
+.SS "Переменные"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBPROFILER_instance_last_index\fP = \fBPROFILER_INSTANCE_NOT_INITIALIZED\fP"
+.br
+.RI "\fIИндекс последнего инициализированного профилировщика\&. \fP"
+.ti -1c
+.RI "const char * \fBPROFILER_files_names\fP [\fBPROFILER_TOTAL_PROFILERS\fP] = {0}"
+.br
+.ti -1c
+.RI "const char * \fBPROFILER_procedures_names\fP [\fBPROFILER_TOTAL_PROFILERS\fP] = {0}"
+.br
+.ti -1c
+.RI "uint32_t \fBPROFILER_lines_numbers\fP [\fBPROFILER_TOTAL_PROFILERS\fP] = {0}"
+.br
+.ti -1c
+.RI "uint32_t \fBPROFILER_times_called\fP [\fBPROFILER_TOTAL_PROFILERS\fP] = {0}"
+.br
+.ti -1c
+.RI "\fBPROFILER_timestruct\fP \fBPROFILER_total_times\fP [\fBPROFILER_TOTAL_PROFILERS\fP] = {0}"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+Файл \fBPROFILING_tools\&.c\fP является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени вызовов\&. 
+
+\fBАвтор:\fP
+.RS 4
+Sergeev Ruslan\&. OOO SPUTNIX, MIPT High-Precision Attitude Control Systems Laboratory 
+.RE
+.PP
+\fBВерсия:\fP
+.RS 4
+V1\&.0\&.0 
+.RE
+.PP
+\fBДата:\fP
+.RS 4
+23-January-2016 Профилировщик времени вызовов - средство анализа исходного кода программ, представляющее программистам и инженерам анализировать время, затраченное на выполнение того или иного участка кода в процентном соотношении (относительно общего времени работы профилировщика)\&.
+.RE
+.PP
+\fBВнимание:\fP
+.RS 4
+THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME\&. AS A RESULT, OOO SPUTNIX, MIPT High-Precision Attitude Control Systems Laboratory SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS\&.
+.RE
+.PP
+.SS "(C) COPYRIGHT 2016 RUSLAN SERGEEV"
+
+.PP
+См\&. определение в файле \fBPROFILING_tools\&.c\fP
+.SH "Переменные"
+.PP 
+.SS "int32_t \fBPROFILER_instance_last_index\fP = \fBPROFILER_INSTANCE_NOT_INITIALIZED\fP"
+.PP
+Индекс последнего инициализированного профилировщика\&. Инициализирован значением PROFILER_INSTANCE_NOT_INITIALIZED, поскольку в начальный момент ни один профилировщик ещё не инициализирован\&. 
+.PP
+См\&. определение в файле PROFILING_tools\&.c строка 37
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для EmbedPROFILER из исходного текста\&.

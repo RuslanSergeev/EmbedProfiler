@@ -1,0 +1,2 @@
+\form#0:\[ average[i] = \frac{PROFILER_total_times[i]}{PROFILER_total_times[0]} \]
+\form#1:\[ average[i] = \frac{PROFILER\_total\_times[i]}{PROFILER\_total\_times[0]} \]

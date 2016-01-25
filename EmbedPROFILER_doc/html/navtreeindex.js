@@ -2,8 +2,7 @@ var NAVTREEINDEX =
 {
 "index.html":[],
 "modules.html":[0],
-"group___configuration__section__for___embed_p_r_o_f_i_l_e_r.html":[0,0],
-"group__port.html":[0,1],
+"group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html":[0,0],
 "annotated.html":[1,0],
 "class_my__class.html":[1,0,0],
 "struct_my__struct.html":[1,0,1],
@@ -12,5 +11,10 @@ var NAVTREEINDEX =
 "_p_r_o_f_i_l_i_n_g__tools_8c.html":[2,0,1],
 "_p_r_o_f_i_l_i_n_g__tools_8h.html":[2,0,2],
 "globals.html":[2,1,0],
-"globals_func.html":[2,1,1]
+"globals_func.html":[2,1,1],
+"globals_vars.html":[2,1,2],
+"globals_type.html":[2,1,3],
+"globals_defs.html":[2,1,4],
+"examples.html":[3],
+"profiler_example_8cpp-example.html":[3,0]
 };

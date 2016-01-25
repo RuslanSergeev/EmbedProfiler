@@ -14,14 +14,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ruslan/EmbedPROFILER/perf_test.cpp" line="20" bodyfile="/home/ruslan/EmbedPROFILER/perf_test.cpp" bodystart="20" bodyend="-1"/>
+        <location file="/home/ruslan/EmbedPROFILER/profiler_example.cpp" line="22" bodyfile="/home/ruslan/EmbedPROFILER/profiler_example.cpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ruslan/EmbedPROFILER/perf_test.cpp" line="19" bodyfile="/home/ruslan/EmbedPROFILER/perf_test.cpp" bodystart="19" bodyend="21"/>
+    <location file="/home/ruslan/EmbedPROFILER/profiler_example.cpp" line="21" bodyfile="/home/ruslan/EmbedPROFILER/profiler_example.cpp" bodystart="21" bodyend="23"/>
     <listofallmembers>
       <member refid="struct_my__struct_1a8ea34b2e963fe95ccac1975beb7fff6a" prot="public" virt="non-virtual"><scope>My_struct</scope><name>I</name></member>
     </listofallmembers>

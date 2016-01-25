@@ -30,14 +30,14 @@
  <tbody>
  <tr style="height: 56px;">
   
-  <td id="projectlogo"><img alt="Logo" src="soft_bug.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="suft_bug_100x100.png"/></td>
   
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">EmbedPROFILER
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">текущая версия: 1.0</span>
    </div>
-   <div id="projectbrief">Оптимизируя ваше время ...</div>
+   <div id="projectbrief">На страже вашего времени.</div>
   </td>
   
   
@@ -57,6 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
       <li><a href="modules.html"><span>Группы</span></a></li>
       <li><a href="annotated.html"><span>Структуры&#160;данных</span></a></li>
       <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="examples.html"><span>Примеры</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -102,49 +103,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="contents">
 <a href="_p_r_o_f_i_l_i_n_g__tools_8c.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html" title="Файл PROFILING_tools.h является частью библиотеки EmbedPROFILER - библиотеки профилировщика времени в...">PROFILING_tools.h</a>&quot;</span>
 <a name="l00002"></a>00002 
-<a name="l00033"></a>00033 int32_t PROFILER_instance_last_index = 0;
-<a name="l00034"></a>00034 
-<a name="l00039"></a>00039 <span class="keyword">const</span> <span class="keywordtype">char</span>* PROFILER_files_names[PROFILER_TOTAL_PROFILERS] = {0};
-<a name="l00040"></a>00040 
-<a name="l00045"></a>00045 <span class="keyword">const</span> <span class="keywordtype">char</span>* PROFILER_procedures_names[PROFILER_TOTAL_PROFILERS] = {0};
-<a name="l00046"></a>00046 
-<a name="l00051"></a>00051 uint32_t PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS] = {0};
-<a name="l00052"></a>00052 
-<a name="l00057"></a>00057 uint32_t PROFILER_times_called[PROFILER_TOTAL_PROFILERS] = {0};
-<a name="l00058"></a>00058 
-<a name="l00063"></a>00063 PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS] = {0};
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066 <span class="keyword">static</span> <span class="keywordtype">float</span> PROFILER_timestamp_diff_to_float(int32_t PROFILER_instance_index){
-<a name="l00067"></a>00067     <span class="keywordflow">return</span> (PROFILER_total_times[PROFILER_instance_index]).tv_sec +
-<a name="l00068"></a>00068             (PROFILER_total_times[PROFILER_instance_index]).tv_nsec*1.e-9;
-<a name="l00069"></a>00069 }               
-<a name="l00070"></a>00070                 
-<a name="l00071"></a>00071 <span class="keyword">static</span> <span class="keywordtype">float</span> PROFILER_calculate_all_profiles_average(){
-<a name="l00072"></a>00072     <span class="keywordflow">return</span> PROFILER_timestamp_diff_to_float(PROFILER_GLOBAL_PROFILE_INDEX);
-<a name="l00073"></a>00073 }                       
-<a name="l00074"></a>00074                         
-<a name="l00075"></a>00075 <span class="keyword">static</span> <span class="keywordtype">float</span> PROFILER_get_current_profile_average(int32_t PROFILER_instance_index){
-<a name="l00076"></a>00076     <span class="keyword">static</span> <span class="keywordtype">float</span> PROFILER_total_average = PROFILER_calculate_all_profiles_average();
-<a name="l00077"></a>00077     <span class="keywordflow">return</span> 100*PROFILER_timestamp_diff_to_float(PROFILER_instance_index)/PROFILER_total_average;
-<a name="l00078"></a>00078 }                               
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080 <span class="keyword">static</span> <span class="keywordtype">void</span> PROFILER_log_instance(uint16_t PROFILER_instance_index){
-<a name="l00081"></a>00081         fprintf(stderr,<span class="stringliteral">&quot;[file %s, line %d  fun:%s] times called: %u average: %f%%\n&quot;</span>,
-<a name="l00082"></a>00082                         PROFILER_files_names[PROFILER_instance_index],
-<a name="l00083"></a>00083             PROFILER_lines_numbers[PROFILER_instance_index],
-<a name="l00084"></a>00084                         PROFILER_procedures_names[PROFILER_instance_index],
-<a name="l00085"></a>00085             PROFILER_times_called[PROFILER_instance_index],
-<a name="l00086"></a>00086                         PROFILER_get_current_profile_average(PROFILER_instance_index));
-<a name="l00087"></a>00087 }               
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089         
-<a name="l00090"></a>00090 <span class="keywordtype">void</span> PROFILER_log(){
-<a name="l00091"></a>00091         PROFILER_calculate_all_profiles_average();
-<a name="l00092"></a>00092     <span class="keywordflow">for</span>(int32_t PROFILER_instance_index = PROFILER_LOCAL_PROFILES_BEGIN; PROFILER_instance_index&lt;PROFILER_instance_last_index; ++PROFILER_instance_index){
-<a name="l00093"></a>00093                 PROFILER_log_instance(PROFILER_instance_index);
-<a name="l00094"></a>00094         }
-<a name="l00095"></a>00095 }       
+<a name="l00037"></a><a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#ab45d681232a34daa38cb1419306a1bf2">00037</a> int32_t <a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8c.html#ab45d681232a34daa38cb1419306a1bf2" title="Индекс последнего инициализированного профилировщика.">PROFILER_instance_last_index</a> = <a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#adfa1dd598814dd5a5c73276c47cba92d" title="Определяет неинициализированный индекс.">PROFILER_INSTANCE_NOT_INITIALIZED</a>;
+<a name="l00038"></a>00038 
+<a name="l00043"></a>00043 <span class="keyword">const</span> <span class="keywordtype">char</span>* PROFILER_files_names[<a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb" title="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</a>] = {0};
+<a name="l00044"></a>00044 
+<a name="l00049"></a>00049 <span class="keyword">const</span> <span class="keywordtype">char</span>* PROFILER_procedures_names[<a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb" title="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</a>] = {0};
+<a name="l00050"></a>00050 
+<a name="l00055"></a>00055 uint32_t PROFILER_lines_numbers[<a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb" title="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</a>] = {0};
+<a name="l00056"></a>00056 
+<a name="l00061"></a>00061 uint32_t PROFILER_times_called[<a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb" title="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</a>] = {0};
+<a name="l00062"></a>00062 
+<a name="l00067"></a>00067 <a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#gae02193769f3b21a09fc0d5035e566a75" title="Тип переменной для хранения измерений времени.">PROFILER_timestruct</a> PROFILER_total_times[<a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga775939d541e95ea75e6e7066a1cc6bcb" title="Максимальное число работающих профилировщиков времени вызова.">PROFILER_TOTAL_PROFILERS</a>] = {0};
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="keyword">static</span> <span class="keywordtype">float</span> PROFILER_timestamp_diff_to_float(int32_t PROFILER_instance_index){
+<a name="l00071"></a>00071     <span class="keywordflow">return</span> (PROFILER_total_times[PROFILER_instance_index]).tv_sec +
+<a name="l00072"></a>00072             (PROFILER_total_times[PROFILER_instance_index]).tv_nsec*1.e-9;
+<a name="l00073"></a>00073 }               
+<a name="l00074"></a>00074                 
+<a name="l00075"></a>00075 <span class="keyword">static</span> <span class="keywordtype">float</span> PROFILER_calculate_all_profiles_average(){
+<a name="l00076"></a>00076     <span class="keywordflow">return</span> PROFILER_timestamp_diff_to_float(<a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a39949f1889adb640b9d00c1e794e4038" title="Индекс &quot;глобального профиллировщика&quot; - начального и главного профилировщика времени вызовов...">PROFILER_GLOBAL_PROFILE_INDEX</a>);
+<a name="l00077"></a>00077 }                       
+<a name="l00078"></a>00078                         
+<a name="l00079"></a>00079 <span class="keyword">static</span> <span class="keywordtype">float</span> PROFILER_get_current_profile_average(int32_t PROFILER_instance_index){
+<a name="l00080"></a>00080     <span class="keyword">static</span> <span class="keywordtype">float</span> PROFILER_total_average = PROFILER_calculate_all_profiles_average();
+<a name="l00081"></a>00081     <span class="keywordflow">return</span> 100*PROFILER_timestamp_diff_to_float(PROFILER_instance_index)/PROFILER_total_average;
+<a name="l00082"></a>00082 }                               
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 <span class="keyword">static</span> <span class="keywordtype">void</span> PROFILER_log_instance(uint16_t PROFILER_instance_index){
+<a name="l00085"></a>00085         fprintf(stderr,<span class="stringliteral">&quot;[file %s,  line %d,  fun: %s] times called: %u,  average: %f%%\n&quot;</span>,
+<a name="l00086"></a>00086                         PROFILER_files_names[PROFILER_instance_index],
+<a name="l00087"></a>00087             PROFILER_lines_numbers[PROFILER_instance_index],
+<a name="l00088"></a>00088                         PROFILER_procedures_names[PROFILER_instance_index],
+<a name="l00089"></a>00089             PROFILER_times_called[PROFILER_instance_index],
+<a name="l00090"></a>00090                         PROFILER_get_current_profile_average(PROFILER_instance_index));
+<a name="l00091"></a>00091 }               
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093         
+<a name="l00094"></a><a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga2f57ecff908155818a48144e366f7c57">00094</a> <span class="keywordtype">void</span> <a class="code" href="group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3.html#ga2f57ecff908155818a48144e366f7c57" title="Вывести отчёт о работе профилировщика.">PROFILER_log</a>(){
+<a name="l00095"></a>00095         PROFILER_calculate_all_profiles_average();
+<a name="l00096"></a>00096     <span class="keywordflow">for</span>(int32_t PROFILER_instance_index = <a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8h.html#a27d5c6f98201a8f99357c6a5c4b82e66" title="Начальный индекс локальных профилировщиков.">PROFILER_LOCAL_PROFILES_BEGIN</a>; PROFILER_instance_index&lt;=<a class="code" href="_p_r_o_f_i_l_i_n_g__tools_8c.html#ab45d681232a34daa38cb1419306a1bf2" title="Индекс последнего инициализированного профилировщика.">PROFILER_instance_last_index</a>; ++PROFILER_instance_index){
+<a name="l00097"></a>00097                 PROFILER_log_instance(PROFILER_instance_index);
+<a name="l00098"></a>00098         }
+<a name="l00099"></a>00099 }       
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -152,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Структуры данных</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -165,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
     <ul>
       <li class="navelem"><a class="el" href="_p_r_o_f_i_l_i_n_g__tools_8c.html">PROFILING_tools.c</a>      </li>
 
-    <li class="footer">Документация по EmbedPROFILER. Последние изменения: Пн 25 Янв 2016 04:02:36. Создано системой
+    <li class="footer">Документация по EmbedPROFILER. Последние изменения: Вт 26 Янв 2016 00:37:02. Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

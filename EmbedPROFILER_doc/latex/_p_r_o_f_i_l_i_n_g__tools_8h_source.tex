@@ -1,0 +1,100 @@
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source}{\section{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h}
+}
+
+\begin{DoxyCode}
+00001 
+00028 \textcolor{preprocessor}{#ifndef PROFILING\_TOOLS\_H}
+00029 \textcolor{preprocessor}{}\textcolor{preprocessor}{#define PROFILING\_TOOLS\_H}
+00030 \textcolor{preprocessor}{}
+00031 \textcolor{preprocessor}{#include <stdio.h>}
+00032 \textcolor{preprocessor}{#include <stdint.h>}
+00033 \textcolor{preprocessor}{#include <time.h>}
+00034 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00058}{}\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{00058} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }timespec \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{PROFILER_timestruct};
+00059  
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00067}{}\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}{00067} \textcolor{preprocessor}{#define PROFILER\_TOTAL\_PROFILERS                1024}
+00068 \textcolor{preprocessor}{}
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00085}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a39949f1889adb640b9d00c1e794e4038}{00085} \textcolor{preprocessor}{#define PROFILER\_GLOBAL\_PROFILE\_INDEX           0}
+00086 \textcolor{preprocessor}{}
+00087 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00095}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a27d5c6f98201a8f99357c6a5c4b82e66}{00095} \textcolor{preprocessor}{#define PROFILER\_LOCAL\_PROFILES\_BEGIN          
+       ((PROFILER\_GLOBAL\_PROFILE\_INDEX)+1)}
+00096 \textcolor{preprocessor}{}
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00104}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_adfa1dd598814dd5a5c73276c47cba92d}{00104} \textcolor{preprocessor}{#define PROFILER\_INSTANCE\_NOT\_INITIALIZED       -1}
+00105 \textcolor{preprocessor}{}
+00106 \textcolor{keyword}{extern} int32\_t \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8c_ab45d681232a34daa38cb1419306a1bf2}{PROFILER_instance_last_index};
+00107 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* PROFILER\_files\_names[\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}{PROFILER_TOTAL_PROFILERS}];
+00108 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* PROFILER\_procedures\_names[\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}{PROFILER_TOTAL_PROFILERS}];
+00109 \textcolor{keyword}{extern} uint32\_t PROFILER\_lines\_numbers[\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}{PROFILER_TOTAL_PROFILERS}];
+00110 \textcolor{keyword}{extern} uint32\_t PROFILER\_times\_called[\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}{PROFILER_TOTAL_PROFILERS}];
+00111 \textcolor{keyword}{extern} \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{PROFILER_timestruct} PROFILER\_total\_times[\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}{PROFILER_TOTAL_PROFILERS}];
+00112 
+00113 \textcolor{keyword}{static} \textcolor{keyword}{inline} \_\_attribute\_\_((always\_inline))
+00114 void \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga0072e0d84e203ad6499be54f4b6e14ee}{PROFILER_refresh_time_consumed}(\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{PROFILER_timestruct} PROFILER\_begin\_time, 
+      \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{PROFILER_timestruct} PROFILER\_end\_time, int32\_t PROFILER\_instance\_index);
+00115 
+00116 static inline \_\_attribute\_\_((always\_inline))
+00117 \textcolor{keywordtype}{void} \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga106b837099d8b52043148fa42592608b}{PROFILER_get_current_time}(\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{PROFILER_timestruct} *
+      PROFILER\_timestruct\_instance);
+00118 
+00119 static inline \_\_attribute\_\_((always\_inline))
+00120 \textcolor{keywordtype}{void} \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a2629430c71701c51e4c8897a61cd0edb}{PROFILER_refresh_times_called}(int32\_t PROFILER\_instance\_index);
+00121 
+00122 static inline \_\_attribute\_\_((always\_inline))
+00123 int32\_t \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a279e6b70c0935894ab8b2f3c2db2cf78}{PROFILER_get_free_instance_index}();
+00124 
+00125 static inline \_\_attribute\_\_((always\_inline))
+00126 \textcolor{keywordtype}{void} \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_ab98613156719567b3aab5f675c195f92}{PROFILER_instance_init}(const \textcolor{keywordtype}{char} *file, const \textcolor{keywordtype}{char} *function, const 
+      int32\_t line, const int32\_t PROFILER\_instance\_index);
+00127 
+00128 static inline \_\_attribute\_\_((always\_inline))
+00129 uint8\_t \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_acf37348ac7f1743ce5ccb80ac04c4944}{PROFILER_instance_is_not_initialized}(int32\_t PROFILER\_instance\_index);
+00130 
+00143 \textcolor{keywordtype}{void} \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga2f57ecff908155818a48144e366f7c57}{PROFILER_log}();
+00144 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00151}{}\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga106b837099d8b52043148fa42592608b}{00151} \textcolor{keywordtype}{void} \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga106b837099d8b52043148fa42592608b}{PROFILER_get_current_time}(\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{PROFILER_timestruct} *
+      PROFILER\_timestruct\_instance)\{
+00152         clock\_gettime(CLOCK\_PROCESS\_CPUTIME\_ID,PROFILER\_timestruct\_instance);
+00153 \}
+00154 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00169}{}\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga0072e0d84e203ad6499be54f4b6e14ee}{00169} \textcolor{keywordtype}{void} \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga0072e0d84e203ad6499be54f4b6e14ee}{PROFILER_refresh_time_consumed}(\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{PROFILER_timestruct} PROFILER\_begin\_time, 
+      \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{PROFILER_timestruct} PROFILER\_end\_time, int32\_t PROFILER\_instance\_index)\{
+00170     \textcolor{keyword}{static} int32\_t PROFILER\_seconds\_summed = (PROFILER\_total\_times[
+      PROFILER\_instance\_index].tv\_nsec)/1000000000;\(\backslash\)
+00171     PROFILER\_total\_times[PROFILER\_instance\_index].tv\_sec +=\(\backslash\)
+00172         PROFILER\_end\_time.tv\_sec - PROFILER\_begin\_time.tv\_sec + 
+      PROFILER\_seconds\_summed;\(\backslash\)
+00173     PROFILER\_total\_times[PROFILER\_instance\_index].tv\_nsec =\(\backslash\)
+00174         PROFILER\_total\_times[PROFILER\_instance\_index].tv\_nsec-1000000000*
+      PROFILER\_seconds\_summed +\(\backslash\)
+00175         (PROFILER\_end\_time.tv\_nsec - PROFILER\_begin\_time.tv\_nsec);\(\backslash\)
+00176 \}
+00177 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00192}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a2629430c71701c51e4c8897a61cd0edb}{00192} \textcolor{keywordtype}{void} \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a2629430c71701c51e4c8897a61cd0edb}{PROFILER_refresh_times_called}(int32\_t PROFILER\_instance\_index)\{
+00193     PROFILER\_times\_called[PROFILER\_instance\_index] += 1;
+00194 \}
+00195 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00204}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a632f3afa2c72dd938e2a5d7e9c1e202e}{00204} \textcolor{preprocessor}{#define PROFILER\_local\_start()\(\backslash\)}
+00205 \textcolor{preprocessor}{        \{\(\backslash\)}
+00206 \textcolor{preprocessor}{                static int32\_t PROFILER\_instance\_index =
+       PROFILER\_INSTANCE\_NOT\_INITIALIZED;\(\backslash\)}
+00207 \textcolor{preprocessor}{                PROFILER\_timestruct PROFILER\_begin\_time, PROFILER\_end\_time;\(\backslash\)}
+00208 \textcolor{preprocessor}{                
+      if(PROFILER\_instance\_is\_not\_initialized(PROFILER\_instance\_index))\{\(\backslash\)}
+00209 \textcolor{preprocessor}{            PROFILER\_instance\_index = PROFILER\_get\_free\_instance\_index();\(\backslash\)}
+00210 \textcolor{preprocessor}{            PROFILER\_instance\_init(\_\_FILE\_\_, \_\_FUNCTION\_\_, \_\_LINE\_\_,
+       PROFILER\_instance\_index);\(\backslash\)}
+00211 \textcolor{preprocessor}{                \}\(\backslash\)}
+00212 \textcolor{preprocessor}{        PROFILER\_refresh\_times\_called(PROFILER\_instance\_index);\(\backslash\)}
+00213 \textcolor{preprocessor}{        PROFILER\_get\_current\_time(&PROFILER\_begin\_time);}
+00214 \textcolor{preprocessor}{}                
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00225}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_ad8354a6502e89adea8535f4029a15b5f}{00225} \textcolor{preprocessor}{#define PROFILER\_local\_stop()\(\backslash\)}
+00226 \textcolor{preprocessor}{            PROFILER\_get\_current\_time(&PROFILER\_end\_time);\(\backslash\)}
+00227 \textcolor{preprocessor}{            PROFILER\_refresh\_time\_consumed(PROFILER\_begin\_time,
+       PROFILER\_end\_time, PROFILER\_instance\_index);\(\backslash\)}
+00228 \textcolor{preprocessor}{    \}}
+00229 \textcolor{preprocessor}{}
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00256}{}\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga425fb9e92c3523ab2a3581d2cbefb5ce}{00256} 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00271}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_a279e6b70c0935894ab8b2f3c2db2cf78}{00271} 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00297}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_ab98613156719567b3aab5f675c195f92}{00297} 
+\hypertarget{_p_r_o_f_i_l_i_n_g__tools_8h_source_l00314}{}\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_acf37348ac7f1743ce5ccb80ac04c4944}{00314} \end{DoxyCode}

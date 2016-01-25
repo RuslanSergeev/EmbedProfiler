@@ -1,0 +1,143 @@
+\hypertarget{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3}{\section{Портируемая\-\_\-секция}
+\label{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3}\index{Портируемая\-\_\-секция@{Портируемая\-\_\-секция}}
+}
+
+
+Эти функции необходимо определить для вашей платформы. Остальная часть кода профилировщика является платформо-\/независимой.  
+
+
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S}~1024
+\begin{DoxyCompactList}\small\item\em Максимальное число работающих профилировщиков времени вызова. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga425fb9e92c3523ab2a3581d2cbefb5ce}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-stop}()~\hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_ad8354a6502e89adea8535f4029a15b5f}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop}()
+\begin{DoxyCompactList}\small\item\em Окончание работы глобального профилировщика. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct timespec \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct}
+\begin{DoxyCompactList}\small\item\em Тип переменной для хранения измерений времени. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga2f57ecff908155818a48144e366f7c57}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-log} ()
+\begin{DoxyCompactList}\small\item\em Вывести отчёт о работе профилировщика. \end{DoxyCompactList}\item 
+void \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga106b837099d8b52043148fa42592608b}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-get\-\_\-current\-\_\-time} (\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct} $\ast$\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct\-\_\-instance)
+\begin{DoxyCompactList}\small\item\em Получить текущее время в системе. \end{DoxyCompactList}\item 
+void \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga0072e0d84e203ad6499be54f4b6e14ee}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-time\-\_\-consumed} (\hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct} \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-begin\-\_\-time, \hyperlink{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct} \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-end\-\_\-time, int32\-\_\-t \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index)
+\begin{DoxyCompactList}\small\item\em Обновить общее время затраченное на работу указанного профилировщика за все его вызовы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Эти функции необходимо определить для вашей платформы. Остальная часть кода профилировщика является платформо-\/независимой. \-Embed\-P\-R\-O\-F\-I\-L\-E\-R проектировался для исполнения во встраиваемых системах независимо от аппаратной платформы. Для того, чтобы \-Embed\-P\-R\-O\-F\-I\-L\-E\-R можно было перенести на интересующую вас платформу, необходимо реализовать на данной платформе определённые в этой секции процедуры и макросы. 
+
+\subsection{Макросы}
+\hypertarget{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga425fb9e92c3523ab2a3581d2cbefb5ce}{\index{Портируемая\-\_\-секция@{Портируемая\-\_\-секция}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-stop@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-stop}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-stop@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-stop}!Портируемая_секция@{Портируемая\-\_\-секция}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-global\-\_\-stop}(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-local\-\_\-stop}()}}\label{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga425fb9e92c3523ab2a3581d2cbefb5ce}
+
+
+Окончание работы глобального профилировщика. 
+
+Запоминается время окончания работы системы профилирования. Которое используется в дальнейшем для расчёта времени работы системы профилирования.\-Добавлено в портируемый раздел, поскольку завершение работы профилировщика может быть платформо-\/зависимой. 
+
+См. определение в файле \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_source}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h} строка 
+
+\hypertarget{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}{\index{Портируемая\-\_\-секция@{Портируемая\-\_\-секция}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S}!Портируемая_секция@{Портируемая\-\_\-секция}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-\-T\-O\-T\-A\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E\-R\-S}~1024}}\label{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga775939d541e95ea75e6e7066a1cc6bcb}
+
+
+Максимальное число работающих профилировщиков времени вызова. 
+
+Это число определяет размеры массивов для хранения указателей на названия функций, имена файлов, номера строк и число вызовов. 
+
+См. определение в файле \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_source}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h} строка 
+
+
+
+\subsection{Типы}
+\hypertarget{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}{\index{Портируемая\-\_\-секция@{Портируемая\-\_\-секция}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct}!Портируемая_секция@{Портируемая\-\_\-секция}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct}}}\label{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_gae02193769f3b21a09fc0d5035e566a75}
+
+
+Тип переменной для хранения измерений времени. 
+
+Для оптимальной работы не рекомендуется хранение времени в целочисленных типах. 
+
+См. определение в файле \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_source}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h} строка 
+
+
+
+\subsection{Функции}
+\hypertarget{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga106b837099d8b52043148fa42592608b}{\index{Портируемая\-\_\-секция@{Портируемая\-\_\-секция}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-get\-\_\-current\-\_\-time@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-get\-\_\-current\-\_\-time}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-get\-\_\-current\-\_\-time@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-get\-\_\-current\-\_\-time}!Портируемая_секция@{Портируемая\-\_\-секция}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-get\-\_\-current\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-get\-\_\-current\-\_\-time} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct} $\ast$}]{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct\-\_\-instance}
+\end{DoxyParamCaption}
+)}}\label{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga106b837099d8b52043148fa42592608b}
+
+
+Получить текущее время в системе. 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt out}  & {\em \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct} & $\ast$\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct\-\_\-instance \par
+ Указатель на структуру, в которой будет сохранено системное время. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_source}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h} строка 
+
+\hypertarget{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga2f57ecff908155818a48144e366f7c57}{\index{Портируемая\-\_\-секция@{Портируемая\-\_\-секция}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-log@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-log}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-log@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-log}!Портируемая_секция@{Портируемая\-\_\-секция}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-log}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-log} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga2f57ecff908155818a48144e366f7c57}
+
+
+Вывести отчёт о работе профилировщика. 
+
+Сообщает затраченное на работу каждого профилировщика время, имена файлов, номера строк, названия функций где был создан данный профилировщик. Также сообщает число вызовов данного профилировщика. 
+
+См. определение в файле \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8c_source}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-c} строка 
+
+\hypertarget{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga0072e0d84e203ad6499be54f4b6e14ee}{\index{Портируемая\-\_\-секция@{Портируемая\-\_\-секция}!\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-time\-\_\-consumed@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-time\-\_\-consumed}}
+\index{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-time\-\_\-consumed@{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-time\-\_\-consumed}!Портируемая_секция@{Портируемая\-\_\-секция}}
+\subsubsection[{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-time\-\_\-consumed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-refresh\-\_\-time\-\_\-consumed} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct}}]{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-begin\-\_\-time, }
+\item[{{\bf \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct}}]{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-end\-\_\-time, }
+\item[{int32\-\_\-t}]{\-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{group___xD0_x9F_xD0_xBE_xD1_x80_xD1_x82_xD0_xB8_xD1_x80_xD1_x83_xD0_xB5_xD0_xBC_xD0_xB0_xD1_x8F_2ef1b31e26d7139e4bfe94879d1322e3_ga0072e0d84e203ad6499be54f4b6e14ee}
+
+
+Обновить общее время затраченное на работу указанного профилировщика за все его вызовы. 
+
+Добавляет время потраченное указанным профилировщиком за последний вызов к общему времени за все вызовы, затраченному указанным профилировщиком. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\tt in}  & {\em \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct} & \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-begin\-\_\-time \par
+ Время начала работы (очередного вызова) локального профилировщика. \\
+\hline
+\mbox{\tt in}  & {\em \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-timestruct} & \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-end\-\_\-time \par
+ Время окончания работы (очередного завершения) локального профилировщика. \\
+\hline
+\mbox{\tt in}  & {\em int32\-\_\-t} & \-P\-R\-O\-F\-I\-L\-E\-R\-\_\-instance\-\_\-index \par
+ Индекс локального профилировщика. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \hyperlink{_p_r_o_f_i_l_i_n_g__tools_8h_source}{\-P\-R\-O\-F\-I\-L\-I\-N\-G\-\_\-tools.\-h} строка 
+
