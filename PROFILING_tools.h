@@ -75,9 +75,9 @@
 extern int32_t PROFILER_instance_last_index;
 extern const char* PROFILER_files_names[PROFILER_TOTAL_PROFILERS];
 extern const char* PROFILER_procedures_names[PROFILER_TOTAL_PROFILERS];
-extern int32_t PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS];
+extern uint32_t PROFILER_lines_numbers[PROFILER_TOTAL_PROFILERS];
+extern uint32_t PROFILER_times_called[PROFILER_TOTAL_PROFILERS];
 extern PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS];
-
 
 /*!
  * @fn uint8_t PROFILER_instance_is_not_initialized(int32_t PROFILER_instance_index)
@@ -108,7 +108,7 @@ void PROFILER_get_current_time(PROFILER_timestruct *PROFILER_timestruct_instance
  * @param [out] PROFILER_timestruct *PROFILER_timestruct_instance
  * */
 static inline __attribute__((always_inline))
-void PROFILER_calc_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index){
+void PROFILER_refresh_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index){
     static int32_t PROFILER_seconds_summed = (PROFILER_total_times[PROFILER_instance_index].tv_nsec)/1000000000;\
     PROFILER_total_times[PROFILER_instance_index].tv_sec +=\
         PROFILER_end_time.tv_sec - PROFILER_begin_time.tv_sec + PROFILER_seconds_summed;\
@@ -122,6 +122,16 @@ void PROFILER_calc_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFIL
 */
 
 /*!
+ * @fn void PROFILER_refresh_times_called(int32_t PROFILER_instance_index)
+ * @brief
+ * @param [in] int32_t PROFILER_instance_index
+ * */
+static inline __attribute__((always_inline))
+void PROFILER_refresh_times_called(int32_t PROFILER_instance_index){
+    PROFILER_times_called[PROFILER_instance_index] += 1;
+}
+
+/*!
  * @def PROFILER_local_start()
  * @brief
  * */	
@@ -132,7 +142,8 @@ void PROFILER_calc_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFIL
 		if(PROFILER_instance_is_not_initialized(PROFILER_instance_index)){\
             PROFILER_instance_index = PROFILER_instance_init(__FILE__, __FUNCTION__, __LINE__);\
 		}\
-        PROFILER_get_current_time(&PROFILER_begin_time)
+        PROFILER_refresh_times_called(PROFILER_instance_index);\
+        PROFILER_get_current_time(&PROFILER_begin_time);
 		
 /*!
  * @def PROFILER_local_stop()
@@ -140,7 +151,7 @@ void PROFILER_calc_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFIL
  * */		
 #define PROFILER_local_stop()\
             PROFILER_get_current_time(&PROFILER_end_time);\
-            PROFILER_calc_time_consumed(PROFILER_begin_time, PROFILER_end_time, PROFILER_instance_index);\
+            PROFILER_refresh_time_consumed(PROFILER_begin_time, PROFILER_end_time, PROFILER_instance_index);\
     }
 
 /*!

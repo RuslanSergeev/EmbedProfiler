@@ -22,10 +22,12 @@ typedef struct My_struct{
 
 static inline __attribute__((always_inline))
 void Increment_I(My_struct *struct_ptr){
+    PROFILER_local_start();
 	for(uint16_t i = 0; i <100; ++i){
 		printf("some message:)!\n");
 		struct_ptr->I += 1.;
     }
+    PROFILER_local_stop();
 }
 
 My_class obj;
