@@ -72,7 +72,12 @@ uint32_t PROFILER_times_called[PROFILER_TOTAL_PROFILERS] = {0};
  * @var PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS]
  * @brief Массив времён затраченных на работы профилировщиков.
 */
-PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS] = {0};
+PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS] = {{0}};
+
+/*!
+ * @addtogroup Портируемая_секция
+ * @{
+ * */
 
 /*!
  * @fn float PROFILER_timestamp_diff_to_float(int32_t PROFILER_instance_index)
@@ -82,9 +87,12 @@ PROFILER_timestruct PROFILER_total_times[PROFILER_TOTAL_PROFILERS] = {0};
  * @return float - Число секунд, которое работал интересующий профилировщик.
 */
 static float PROFILER_timestamp_diff_to_float(int32_t PROFILER_instance_index){
-    return (PROFILER_total_times[PROFILER_instance_index]).tv_sec +
-            (PROFILER_total_times[PROFILER_instance_index]).tv_nsec*1.e-9;
-}		
+    return system_timer_get_time(&PROFILER_total_times[PROFILER_instance_index]);
+}
+
+/*!
+ * @}
+ * */
 
 /*!
  * @fn float PROFILER_calculate_all_profiles_average()
@@ -109,7 +117,7 @@ static float PROFILER_calculate_all_profiles_average(){
  * @return float - Загруженность локального профилировщика.
 */
 static float PROFILER_get_current_profile_average(int32_t PROFILER_instance_index){
-    static float PROFILER_total_average = PROFILER_calculate_all_profiles_average();
+    float PROFILER_total_average = PROFILER_calculate_all_profiles_average();
     return 100*PROFILER_timestamp_diff_to_float(PROFILER_instance_index)/PROFILER_total_average;
 }				
 
@@ -119,7 +127,7 @@ static float PROFILER_get_current_profile_average(int32_t PROFILER_instance_inde
  * @param [in] uint16_t PROFILER_instance_index
 */
 static void PROFILER_log_instance(uint16_t PROFILER_instance_index){
-        fprintf(stderr,"[file %s,  line %d,  fun: %s] times called: %u,  average: %f%%\n",
+        fprintf(stderr,"[file %s,  line %u,  fun: %s] times called: %u,  average: %f%%\n",
 			PROFILER_files_names[PROFILER_instance_index],
             PROFILER_lines_numbers[PROFILER_instance_index],
 			PROFILER_procedures_names[PROFILER_instance_index],
@@ -136,7 +144,8 @@ static void PROFILER_log_instance(uint16_t PROFILER_instance_index){
  * */
 void PROFILER_log(){
 	PROFILER_calculate_all_profiles_average();
-    for(int32_t PROFILER_instance_index = PROFILER_LOCAL_PROFILES_BEGIN; PROFILER_instance_index<=PROFILER_instance_last_index; ++PROFILER_instance_index){
+	int32_t PROFILER_instance_index;
+    for(PROFILER_instance_index = PROFILER_LOCAL_PROFILES_BEGIN; PROFILER_instance_index<=PROFILER_instance_last_index; ++PROFILER_instance_index){
 		PROFILER_log_instance(PROFILER_instance_index);
 	}
 }	

@@ -12,10 +12,12 @@ public:
 	My_class():I(0){};
 	volatile float I;
 	inline void Increment_I(){
-		for(uint16_t i = 0; i <1000; ++i){
-			this->I += 1.;
-		}
-	};
+        PROFILER_local_start();
+        for(uint16_t i = 0; i <100; ++i){
+            printf("some message:)!\n");
+            this->I += 1.F;
+        }
+        PROFILER_local_stop();
 };
 
 typedef struct My_struct{
@@ -27,7 +29,7 @@ void Increment_I(My_struct *struct_ptr){
     PROFILER_local_start();
 	for(uint16_t i = 0; i <100; ++i){
 		printf("some message:)!\n");
-		struct_ptr->I += 1.;
+        struct_ptr->I += 1.F;
     }
     PROFILER_local_stop();
 }

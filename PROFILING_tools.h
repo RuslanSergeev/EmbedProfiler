@@ -30,7 +30,6 @@
 
 #include <stdio.h>
 #include <stdint.h>
-#include <time.h>
 
 /*!
  * @example profiler_example.cpp
@@ -47,7 +46,8 @@
  * Для того, чтобы EmbedPROFILER можно было перенести на интересующую вас платформу, необходимо реализовать
  * на данной платформе определённые в этой секции процедуры и макросы.
  * */
- 
+
+
 /*!
  * @typedef PROFILER_timestruct
  * @brief Тип переменной для хранения измерений времени.
@@ -55,8 +55,21 @@
  * Для оптимальной работы не рекомендуется хранение
  * времени в целочисленных типах.
  * */
-typedef struct timespec PROFILER_timestruct;
+
+#ifndef PLATFORM
+#define PLATFORM STM32F4XX
+#include "stm32f4xx.h"
+#endif
+
+
+#include <mtime.h>
+typedef system_timer_typedef PROFILER_timestruct;
+
  
+/*!
+ * @}
+ * */
+
 /*!
  * @def PROFILER_TOTAL_PROFILERS
  * @brief Максимальное число работающих профилировщиков времени вызова.
@@ -66,9 +79,6 @@ typedef struct timespec PROFILER_timestruct;
  * */	
 #define PROFILER_TOTAL_PROFILERS                1024
 
-/*!
- * @}
- * */
 
 /*!
  * @def PROFILER_GLOBAL_PROFILE_INDEX
@@ -148,8 +158,9 @@ void PROFILER_log();
  * @param [out] PROFILER_timestruct *PROFILER_timestruct_instance
  * \n Указатель на структуру, в которой будет сохранено системное время.
  * */
+
 void PROFILER_get_current_time(PROFILER_timestruct *PROFILER_timestruct_instance){
-        clock_gettime(CLOCK_PROCESS_CPUTIME_ID,PROFILER_timestruct_instance);
+        system_timer_update(PROFILER_timestruct_instance);
 }
 
 /*!
@@ -166,14 +177,11 @@ void PROFILER_get_current_time(PROFILER_timestruct *PROFILER_timestruct_instance
  * @param [in] int32_t PROFILER_instance_index
  * \n Индекс локального профилировщика.
  * */
+
 void PROFILER_refresh_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index){
-    static int32_t PROFILER_seconds_summed = (PROFILER_total_times[PROFILER_instance_index].tv_nsec)/1000000000;\
-    PROFILER_total_times[PROFILER_instance_index].tv_sec +=\
-        PROFILER_end_time.tv_sec - PROFILER_begin_time.tv_sec + PROFILER_seconds_summed;\
-    PROFILER_total_times[PROFILER_instance_index].tv_nsec =\
-        PROFILER_total_times[PROFILER_instance_index].tv_nsec-1000000000*PROFILER_seconds_summed +\
-        (PROFILER_end_time.tv_nsec - PROFILER_begin_time.tv_nsec);\
+    system_timer_get_diff(&PROFILER_end_time, &PROFILER_begin_time, &PROFILER_total_times[PROFILER_instance_index]);
 }
+
 
 /*!
  * @}
