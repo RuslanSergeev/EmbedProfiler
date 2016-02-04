@@ -30,6 +30,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <inttypes.h>
 
 /*!
  * @example profiler_example.cpp
@@ -179,7 +180,10 @@ void PROFILER_get_current_time(PROFILER_timestruct *PROFILER_timestruct_instance
  * */
 
 void PROFILER_refresh_time_consumed(PROFILER_timestruct PROFILER_begin_time, PROFILER_timestruct PROFILER_end_time, int32_t PROFILER_instance_index){
-    system_timer_get_diff(&PROFILER_end_time, &PROFILER_begin_time, &PROFILER_total_times[PROFILER_instance_index]);
+	PROFILER_timestruct local_diff;
+    system_timer_get_diff_timer(&PROFILER_end_time, &PROFILER_begin_time, &local_diff);
+    PROFILER_total_times[PROFILER_instance_index].num_interrupts += local_diff.num_interrupts;
+    PROFILER_total_times[PROFILER_instance_index].num_ticks += local_diff.num_ticks;
 }
 
 
@@ -325,3 +329,4 @@ uint8_t PROFILER_instance_is_not_initialized(int32_t PROFILER_instance_index){
 
 
 #endif //PROFILING_TOOLS_H
+

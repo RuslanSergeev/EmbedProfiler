@@ -127,7 +127,7 @@ static float PROFILER_get_current_profile_average(int32_t PROFILER_instance_inde
  * @param [in] uint16_t PROFILER_instance_index
 */
 static void PROFILER_log_instance(uint16_t PROFILER_instance_index){
-        fprintf(stderr,"[file %s,  line %u,  fun: %s] times called: %u,  average: %f%%\n",
+        fprintf(stderr,"[file %s,  line %"PRIu32",  fun: %s] times called: %"PRIu32",  average: %f%%\n",
 			PROFILER_files_names[PROFILER_instance_index],
             PROFILER_lines_numbers[PROFILER_instance_index],
 			PROFILER_procedures_names[PROFILER_instance_index],
@@ -149,3 +149,4 @@ void PROFILER_log(){
 		PROFILER_log_instance(PROFILER_instance_index);
 	}
 }	
+
